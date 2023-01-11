@@ -1,6 +1,6 @@
 .name-page {
     border-bottom: 2px solid #5CB85C;
-    background-image: url(../img/bg-top.gif);
+    background-image: url(../img/bg-top.png);
     color: #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -15,10 +15,10 @@
     }
 
     .name-page-right {
+      font-size: 0.875rem;
         span {
-            font-weight: bold;
-            margin-right: 1rem;
-            font-size: 0.875rem;
+          font-weight: bold;
+          margin-right: 1rem;
         }
 
         a {

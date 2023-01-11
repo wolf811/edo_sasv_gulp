@@ -6,18 +6,34 @@
 <body>
   <div class="wrapper d-print-none">
     @include('partials/header.html')
+    @include('partials/name-page.html')
     @include('partials/top-menu.html')
-    <main class="mb-5">
-      <div class="container">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut, modi labore ad dolor, deserunt quam
-          facilis ipsum laudantium provident nostrum quod alias ducimus. Aliquid ipsum minus magni ipsa delectus, et
-          laborum nemo vel odit soluta blanditiis dicta earum architecto provident veniam consectetur id debitis
-          molestiae amet excepturi eos! Delectus, reiciendis quidem molestiae libero. Illo repellat magni at iusto odio
-          ea dolorem cum fugit est, error et modi recusandae aperiam quos vero corrupti nihil optio cumque distinctio
-          fuga vitae, voluptate? Reprehenderit debitis iure est quia nihil facilis. Sed error unde impedit, accusantium
-          voluptatem rem quibusdam asperiores, omnis, corrupti eaque laudantium?</p>
+    <div class="content">
+      @include('partials/breadcrumb.html')
+      <div class="container mt-4">
+        <div class="alert alert-light border shadow-sm">
+          <div class="row justify-content-between">
+            <div class="col-xl-9 order-2 order-xl-1">
+              <p class="h5 text-dark mb-2">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="col-xl-3 order-1 order-xl-2 text-xl-right mb-3 mb-xl-0">
+              <span class="badge badge-info">Опубликовано 21 декабря 2022 г. 10:00</span>
+            </div>
+          </div>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aut, modi labore ad dolor, deserunt quam
+            facilis ipsum laudantium provident nostrum quod alias ducimus. Aliquid ipsum minus magni ipsa delectus, et
+            laborum nemo vel odit soluta blanditiis dicta earum architecto provident veniam consectetur id debitis
+            molestiae amet excepturi eos! Delectus, reiciendis quidem molestiae libero. Illo repellat magni at iusto odio
+            ea dolorem cum fugit est, error et modi recusandae aperiam quos vero corrupti nihil optio cumque distinctio
+            fuga vitae, voluptate? Reprehenderit debitis iure est quia nihil facilis. Sed error unde impedit, accusantium
+            voluptatem rem quibusdam asperiores, omnis, corrupti eaque laudantium?</p>
+
+        </div>
       </div>
-    </main>
+    </div>
+
+
 
     @include('partials/footer.html')
 
