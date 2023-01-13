@@ -1,0 +1,121 @@
+<div class="filter-block mb-4">
+  <div class="line-filter py-2">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md mb-2 mb-md-0">
+          <a href="#" class="btn btn-sm btn-primary mb-2 mb-sm-0 text-uppercase"><i class="fa fa-plus mr-2"></i>Новая
+            аттестация</a>
+        </div>
+        <div class="col-md col-lg-4 col-xl-3 float-sm-right">
+          <form>
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control" placeholder="Поиск..." aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit" id="button-addon2" title="Найти"><i
+                    class="fa fa-search"></i></button>
+                <button type="button" class="btn btn-primary" data-toggle="collapse" href="#collapse-filter"
+                  role="button" aria-expanded="false" aria-controls="collapse-filter">Фильтр
+                  <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="collapse filter py-3" id="collapse-filter">
+    <!-- Расширенный фильтр -->
+    <div class="container-fluid">
+      <form>
+        <div class="form-row align-items-center">
+          <div class="col-sm-6 col-xl-2 col-xxl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">Заявитель</label>
+              <input type="text" class="form-control form-control-sm" placeholder="Название / ИНН">
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 col-xl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">Город</label>
+              <input type="text" class="form-control form-control-sm">
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 col-xl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">Статус</label>
+              <select class="form-control form-control-sm">
+                <option>все</option>
+                <option>новая</option>
+                <option>зарегистрирована</option>
+                <option>отправлена в НАКС</option>
+                <option>размещена в реестре</option>
+                <option>отказ</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6 col-sm-2 col-xl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">Направление</label>
+              <select class="form-control form-control-sm">
+                <option>все</option>
+                <option>СМ</option>
+                <option>СО</option>
+                <option>СТ</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6 col-sm-2 col-xl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">ID аттестации</label>
+              <input type="text" class="form-control form-control-sm">
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-2 col-xl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">Дата создания от</label>
+              <div id="case_date_start_picker" class="input-group form-date" data-picker="datepicker">
+                <input type="text" class="form-control form-control-sm js-datetimepicker" placeholder="дд.мм.гггг">
+                <div class="input-group-append">
+                  <div id="case_date_start_picker_trigger" class="btn btn-outline-secondary btn-sm add-on"><i
+                      class="fa fa-calendar"></i></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-2 col-xl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">до</label>
+              <div id="case_date_end_picker" class="input-group form-date" data-picker="datepicker">
+                <input type="text" class="form-control form-control-sm js-datetimepicker" placeholder="дд.мм.гггг">
+                <div class="input-group-append">
+                  <div id="case_date_end_picker_trigger" class="btn btn-outline-secondary btn-sm add-on"><i
+                      class="fa fa-calendar"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-6 col-sm-3 col-xl-1">
+            <div class="form-group">
+              <label class="label-sm" for="">Вид аттестации</label>
+              <select class="form-control form-control-sm">
+                <option>все</option>
+                <option>первичная</option>
+                <option>дополнительная</option>
+                <option>периодическая</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-search mr-2"></i>Найти</button>
+        <button type="submit" class="btn btn-outline-primary btn-sm">Сбросить</button>
+        <button type="button" class="btn btn-link btn-sm" data-toggle="collapse" href="#collapse-filter"
+          aria-expanded="true" aria-controls="collapse-filter">Закрыть</button>
+      </form>
+    </div>
+  </div>
+</div>

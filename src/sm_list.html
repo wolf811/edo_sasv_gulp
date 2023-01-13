@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper d-print-none">
+    @include('partials/header.html')
+    @include('partials/name-page.html', {
+      'title': 'Аттестация сварочных материалов'
+    })
+    @include('partials/top-menu.html')
+    @include('partials/breadcrumb.html')
+    <div class="content">
+      @include('partials/filter-sm-list.html')
+      <div class="container-fluid">
+        <div class="bg-light border shadow-sm p-2 mb-3">
+          <form class="form-inline" method="post" action="" novalidate>
+            <label class="col-form-label col-form-label-sm mr-2" for="sortingCertificate">Сортировать:</label>
+
+            <select class="form-control form-control-sm mr-2" name="ordering">
+              <option value="2">по ID (по убыванию)</span></option>
+              <option value="3">по ID (по возрастанию)</span></option>
+              <option selected>по дате создания (по убыванию)</span></option>
+              <option value="1">по дате создания (по возрастанию)</span></option>
+            </select>
+            <button type="submit" class="btn btn-outline-primary btn-xs px-2" title="Применить"><i
+                class="fa fa-angle-right"></i></button>
+          </form>
+        </div>
+        @include('partials/pagination.html')
+        <div class="table-responsive">
+          <table class="table table-bordered table-documents">
+            <thead>
+              <tr class="active">
+                <th colspan="2">Статус, действия</th>
+                <th>ID аттестации, дата создания</th>
+                <!-- <th v-if="status == 'apl'">Место аттестации</th> -->
+                <th>Сведения о заявителе<br><small class="text-muted">(название, город, ИНН)</small></th>
+                <th>Вид аттестации</th>
+                <th>Заявленная область аттестации</th>
+                <th>Установленная область аттестации</th>
+                <th>Готовность документов, дата изменения</th>
+                <th>Результат аттестации<br><small class="text-muted">(№, период действия)</small></th>
+                <th>Комментарии</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="fa-stack fa-lg text-secondary" data-toggle="popover" data-placement="right" data-trigger="hover"
+                    data-content="Новая">
+                    <i class="fa fa-file-o fa-stack-1x"></i>
+                  </span>
+                </td>
+                <td>
+                  <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                      class="fa fa-bars fa-lg"></i></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Редактировать</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-clone mr-1"></i>Копировать</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
+                      data-confirm="Вы уверены?"><i class="fa fa-download text-primary mr-1"></i>Скачать документы</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal"
+                      data-target="#modalRegistrationApplication"><i class="fa fa-clock-o text-info mr-1"></i>Зарегистрировать</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
+                      data-confirm="Вы уверены?"><i class="fa fa-trash-o mr-1 text-danger"></i>Удалить</a>
+                  </div>
+                </td>
+                <td>СМ-00001,<span class="text-muted ml-1">10.03.2022</span></td>
+                <td>
+                  <div>ООО "Сварочные материалы"</div>
+                  <div class="text-muted ml-1">Санкт-Петербург</div>
+                  <div>77812455566</div>
+                </td>
+                <td>Первичная</td>
+                <td>
+                  <div>Пс (марка СМ)</div>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>3 (3.2) + 51 (51.1, 51.2)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td><em class="text-muted">не установлена</em></td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <em class="text-muted">Программа не заполнена</em>
+                  </div>
+                  <div>
+                    <em class="text-muted">Протокол не заполнен</em>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-primary btn-sm disabled" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Свидетельство</a>
+                </td>
+                <td class="text-secondary" style="max-width: 150px;"></td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="fa-stack fa-lg text-secondary" data-toggle="popover" data-placement="right" data-trigger="hover"
+                    data-content="Новая от заявителя">
+                    <i class="fa fa-file-o fa-stack-1x"></i>
+                    <i>з</i>
+                  </span>
+                </td>
+                <td>
+                  <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                      class="fa fa-bars fa-lg"></i></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Редактировать</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-clone mr-1"></i>Копировать</a>
+                                        <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
+                      data-confirm="Вы уверены?"><i class="fa fa-download text-primary mr-1"></i>Скачать документы</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal"
+                      data-target="#modalRegistrationApplication"><i class="fa fa-clock-o text-info mr-1"></i>Зарегистрировать</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalComments"><i
+                        class="fa fa-arrow-left text-danger mr-1"></i>Вернуть заявителю</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
+                      data-confirm="Вы уверены?"><i class="fa fa-trash-o mr-1 text-danger"></i>Удалить</a>
+                  </div>
+                </td>
+                <td>СМ-00001,<span class="text-muted ml-1">10.03.2022</span></td>
+                <td>
+                  <div>ООО "Сварочные материалы"</div>
+                  <div class="text-muted ml-1">Санкт-Петербург</div>
+                  <div>77812455566</div>
+                </td>
+                <td>Первичная</td>
+                <td>
+                  <div>Пс (марка СМ)</div>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>3 (3.2) + 51 (51.1, 51.2)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td><em class="text-muted">не установлена</em></td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <em class="text-muted">Программа не заполнена</em>
+                  </div>
+                  <div>
+                    <em class="text-muted">Протокол не заполнен</em>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-primary btn-sm disabled" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Свидетельство</a>
+                </td>
+                <td class="text-secondary" style="max-width: 150px;"></td>
+              </tr>
+              <tr>
+                <td>
+                  <i class="fa fa-clock-o fa-lg text-info" data-toggle="popover" data-placement="right" data-trigger="hover"
+                    data-content="Зарегистрирована"></i>
+                </td>
+                <td>
+                  <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                      class="fa fa-bars fa-lg"></i></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Редактировать</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-clone mr-1"></i>Копировать</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
+                      data-confirm="Вы уверены?"><i class="fa fa-arrow-right text-primary mr-1"></i>Отправить в НАКС</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
+                      data-confirm="Вы уверены?"><i class="fa fa-trash-o mr-1 text-danger"></i>Удалить</a>
+                  </div>
+                </td>
+                <td>СT-00001,<span class="text-muted ml-1">10.03.2022</span></td>
+                <td>
+                  <div>ООО "Организация для проверки готовности к выполнению сварочных работ"</div>
+                  <div class="text-muted ml-1">Санкт-Петербург</div>
+                  <div>77812455566</div>
+                </td>
+                <td>Первичная</td>
+                <td>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Программа</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Протокол</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-primary btn-sm disabled" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Свидетельство</a>
+                </td>
+                <td class="text-secondary" style="max-width: 150px;"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <i class="fa fa-arrow-right fa-lg text-primary" data-toggle="popover" data-placement="right" data-trigger="hover"
+                    data-content="Отправлена"></i>
+                </td>
+                <td>
+                  <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                      class="fa fa-bars fa-lg"></i></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fa fa-clone mr-1"></i>Копировать</a>
+                  </div>
+                </td>
+                <td>СТ-00001,<span class="text-muted ml-1">10.03.2022</span></td>
+                <td>
+                  <div>ООО "Организация для проверки готовности к выполнению сварочных работ"</div>
+                  <div class="text-muted ml-1">Санкт-Петербург</div>
+                  <div>77812455566</div>
+                </td>
+                <td>Первичная</td>
+                <td>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Программа</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Протокол</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-primary btn-sm disabled" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Свидетельство</a>
+                </td>
+                <td class="text-secondary" style="max-width: 150px;"></td>
+              </tr>
+              <tr>
+                <td rowspan="2">
+                  <i class="fa fa-check fa-lg text-success" data-toggle="popover" data-placement="right" data-trigger="hover"
+                    data-content="Размещено в реестре"></i>
+                </td>
+                <td rowspan="2">
+                  <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                      class="fa fa-bars fa-lg"></i></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fa fa-clone mr-1"></i>Копировать</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="fa fa-refresh mr-1"></i>Переоформить</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-files-o mr-1"></i>Выдать дубликат</a>
+                  </div>
+                </td>
+                <td rowspan="2">СО-00002,<span class="text-muted ml-1">10.03.2022</span></td>
+                <td rowspan="2">
+                  <div>ООО "Строительное оборудование"</div>
+                  <div class="text-muted ml-1">Санкт-Петербург</div>
+                  <div>77812455566</div>
+                </td>
+                <td>Дополнительная</td>
+                <td>
+                  <div>ДИ (марка СО)</div>
+                  <div>РД, <span class="text-danger">РАД (наплавка)</span></div>
+                  <div>ГО, ОХНВП</div>
+              </td>
+                <td>
+                  <div>ДИ+ДП/КС (марка СО)</div>
+                  <div>РД</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Программа</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Протокол</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-primary btn-sm" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Свидетельство</a>
+                  <div class="mt-1">
+                    <p class="text-bold mb-0">АЦСО-22-00002</p>
+                    <p class="mb-0">10.03.2022 - 09.03.2025</p>
+                  </div>
+                </td>
+                <td class="text-secondary" style="max-width: 150px;"></td>
+              </tr>
+              <tr>
+                <td>Первичная</td>
+                <td>
+                  <div>ДИ (марка СО)</div>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, <span class="text-danger">ОХНВП</span></div>
+           </td>
+                <td>
+                  <div>ДИ (марка СО)</div>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО</div>
+               </td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Программа</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Протокол</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="btn btn-primary btn-sm" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Свидетельство</a>
+                  <div class="mt-1">
+                    <p class="text-bold mb-0">АЦСО-22-00002</p>
+                    <p class="mb-0">10.03.2022 - 09.03.2025</p>
+                  </div>
+                </td>
+                <td class="text-secondary" style="max-width: 150px;"></td>
+              </tr>
+              <tr>
+                <td rowspan=3>
+                  <i class="fa fa-times-circle fa-lg text-danger" data-toggle="popover" data-placement="right" data-trigger="hover"
+                    data-content="Отказ"></i>
+                </td>
+                <td rowspan=3>
+                  <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                      class="fa fa-bars fa-lg"></i></a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"><i class="fa fa-clone mr-1"></i>Копировать</a>
+                  </div>
+                </td>
+                <td rowspan=3>СО-00002,<span class="text-muted ml-1">10.03.2022</span></td>
+
+                <td rowspan=3>
+                  <div>ООО "Строительное оборудование"</div>
+                  <div class="text-muted ml-1">Санкт-Петербург</div>
+                  <div>77812455566</div>
+                </td>
+                <td>Периодическая</td>
+                <td>
+                  <div>ДИ+ДП/КС (марка СО)</div>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td><em class="text-muted">не установлена</em></td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Программа</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Протокол</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Акт
+                    экспертизы</a>
+                </td>
+                <td rowspan=3 class="text-secondary" style="max-width: 150px;">
+                  <strong class="mr-1">НАКС (Кузнецов П.С.):</strong><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                    eius vel repellat provident nam impedit optio. </em>
+                </td>
+              </tr>
+              <tr>
+                <td>Первичная</td>
+                <td>
+                  <div>ДИ (марка СО)</div>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td><em class="text-muted">не установлена</em></td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Программа</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Протокол</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Акт
+                    экспертизы</a>
+                </td>
+              </tr>
+              <tr>
+                <td>Первичная</td>
+                <td>
+                  <div>ДИ (марка СО)</div>
+                  <div>РД, РАД (наплавка)</div>
+                  <div>ГО, ОХНВП</div>
+           </td>
+                <td><em class="text-muted">не установлена</em></td>
+                <td class="text-left">
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Заявка</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Программа</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
+                        class="fa fa-file-text-o mr-1"></i>Протокол</a>,
+                    <span class="text-muted ml-1">10.03.2022</span>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Изменить</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-print mr-1"></i>Печать</a>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Акт
+                    экспертизы</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        @include('partials/pagination.html')
+      </div>
+    </div>
+
+
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper d-print-none">
+    @include('partials/header.html')
+    @include('partials/name-page.html', {
+      'title': 'САСв - Аттестация сварочных материалов'
+    })
+    @include('partials/top-menu.html')
+    @include('partials/breadcrumb.html')
+    <div class="content">
+      @include('partials/filter-sm-list.html')
+      <h6>Таблица</h6>
+    </div>
+
+
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper d-print-none">
+    @include('partials/header.html')
+    @include('partials/name-page.html', {
+      'title': 'Профиль организации'
+    })
+    @include('partials/top-menu.html')
+    @include('partials/breadcrumb.html')
+    <div class="content">
+      <h5>Профиль организации</h5>
+    </div>
+
+
+
+    @include('partials/footer.html')
+
+  </div>
+</body>
+
+</html>
