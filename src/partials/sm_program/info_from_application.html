@@ -1,0 +1,267 @@
+<!-- <div v-if="direction == 'st'">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+      <tr>
+        <td class="table-active w-50"><b>Наименование технологии сварки (наплавки, пайки)</b></td>
+        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta necessitatibus earum illum sunt sapiente
+          autem ipsum facilis praesentium dicta corrupti, rem eos placeat ab ad magni sed molestiae dolore modi!</td>
+      </tr>
+    </table>
+  </div>
+</div> -->
+<p class="text-info text-sm mb-1">Сведения о заявителе аттестации<small class="text-warning ml-2">(для
+    протокола)</small></p>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover table-sm">
+    <tr>
+      <td class="table-active w-50">Наименование организации</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr>
+      <td class="table-active">Адрес места нахождения организации</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr>
+      <td class="table-active">ИНН (или иной идентификационный признак)</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr v-if="direction == 'sm'">
+      <td class="table-active">Адрес места нахождения производства<small class="text-warning ml-2">(для производителя
+          СМ)</small></td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+  </table>
+</div>
+<div v-if="direction == 'sm'">
+  <p class="text-info text-sm mb-1">Сведения о производителе СМ<small class="text-warning ml-2">(для протокола, только
+      для представителя производителя СМ)</small></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+      <tr>
+        <td class="table-active w-50">Наименование организации</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Адрес места нахождения организации</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">ИНН (или иной идентификационный признак)</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Адрес места нахождения производства</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+    </table>
+  </div>
+  <p class="text-info text-sm mb-1">Данные о сварочных материалах<small class="text-warning ml-2">(для программы и
+      протокола)</small></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+      <tr>
+        <td class="table-active w-50">Вид СМ</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Марка СМ или состав газа, газовой смеси</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Вид и марка сочетаемого СМ</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Классификационное обозначение (тип)</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Типоразмер(ы), состав</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Производитель СМ</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <!-- <tr>
+        <td class="table-active">Адрес места нахождения производства<small class="text-warning ml-2">(для
+            производителя или представителя производителя СМ)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr> -->
+      <tr>
+        <td class="table-active">НД, устанавливающий технические требования к СМ<small class="text-warning ml-2">(для
+            производителя или представителя производителя СМ)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Номер партии<small class="text-warning ml-2">(для потребителя СМ)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Объем партии<small class="text-warning ml-2">(для потребителя СМ)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Дата выпуска партии<small class="text-warning ml-2">(для потребителя СМ)</small>
+        </td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Документ о качестве (номер, дата)<small class="text-warning ml-2">(для потребителя
+            СМ)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Шифр НД, регламентирующих нормы оценки качества сварных соединений<small
+            class="text-warning ml-2">(для потребителя
+            СМ)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+    </table>
+  </div>
+  <p class="text-info text-sm mb-1">Заявленная область аттестации, дополнительные требования<small
+      class="text-warning ml-2">(для программы и протокола)</small></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+      <tr>
+        <td class="table-active w-50">Способы сварки (наплавки)</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Группы/подгруппы основных материалов</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Объекты</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Дополнительные требования к СМ</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- <div v-if="direction == 'so'">
+  <p class="text-info text-sm mb-1">Сведения о сварочном оборудовании, заявленная область аттестации, дополнительные
+    требования<small class="text-warning ml-2">(для программы и протокола)</small></p>
+  <div class="table-responsive">
+    <table class="table table-bordered text-center bg-white">
+      <tr class="table-active">
+        <th width="40">№ пп</th>
+        <th>Вид атт<small class="text-warning ml-2">(для протокола)</small></th>
+        <th>№ свидетельства об аттестации<small class="text-warning ml-2">(для протокола при доп. или периодич.
+            атт.)</small></th>
+        <th>Шифр СО</th>
+        <th>Наименование, марка и обозначение (модель, тип)</th>
+        <th>Производитель</th>
+        <th>Заводской номер, дата производства (изготовления)</th>
+        <th>Сертификат соответствия<small class="text-warning ml-2">(для протокола)</small></th>
+        <th>Способы сварки (наплавки)</th>
+        <th>Объекты</th>
+        <th>Дополнительные требования к СО</th>
+      </tr>
+      <tr>
+        <td class="text-bold bg-light">1</td>
+        <td>Пр</td>
+        <td>-</td>
+        <td>ДИ</td>
+        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, incidunt!</td>
+        <td>Lorem, ipsum dolor.</td>
+        <td>
+          <div>123456, 10.02.2021</div>
+          <div>123456, 10.02.2021</div>
+          <div>123456, 10.02.2021</div>
+        </td>
+        <td>1234CJ12</td>
+        <td>РАД, МАДП (наплавка)</td>
+        <td>ГО, ОХНВП</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td class="text-bold bg-light">2</td>
+        <td>Доп</td>
+        <td>АЦСО-22-00001</td>
+        <td>ДИ+ДП/КС</td>
+        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, incidunt!</td>
+        <td>Lorem, ipsum dolor.</td>
+        <td>
+          <div>123456, 10.02.2021</div>
+          <div>123456, 10.02.2021</div>
+        </td>
+        <td>1234CJ12</td>
+        <td>РАД, МАДП (наплавка)</td>
+        <td>ГО, ОХНВП</td>
+        <td>-</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div v-if="direction == 'st'">
+  <p class="text-info text-sm mb-1">Сведения об организации и филиалах (обособленных подразделениях)<small
+      class="text-warning ml-2">(для программы и протокола)</small></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+      <tr>
+        <td class="table-active w-50">Наименование организации</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Адрес места нахождения организации</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">№ свидетельства о готовности организации к выполнению сварочных работ<small
+            class="text-warning ml-2">(для программы при периодической аттестации)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td rowspan="3" class="table-active">Наименования и адреса мест нахождения филиалов (обособленных
+          подразделений)<small class="text-warning ml-2">(для программы и протокола)</small></td>
+        <td>
+          <div>Филиал 1</div>
+          <div>Адрес 1</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Филиал 2</div>
+          <div>Адрес 2</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Филиал 3</div>
+          <div>Адрес 3</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="table-active">ПТД (наименование, обозначение, дата утверждения)<small class="text-warning ml-2">(для
+            протокола)</small></td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Вид проверки готовности организации к выполнению сварочных работ<small
+            class="text-warning ml-2">(для протокола)</small></td>
+        <td>первичная или периодическая</td>
+      </tr>
+    </table>
+  </div>
+  <p class="text-info text-sm mb-1">Заявленная область аттестации технологии сварки (пайки, наплавки)<small
+      class="text-warning ml-2">(для программы и протокола)</small></p>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover table-sm">
+      <tr>
+        <td class="table-active w-50">Способ (комбинация способов) сварки (пайки, наплавки)</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td class="table-active">Объект(ы)</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+    </table>
+  </div>
+  <p class="text-sm mb-1">Параметры сварных соединений<small class="text-warning ml-2">(для программы и
+      протокола)</small></p>
+  {% include 'sasv/includes/program/table_parameters_static_st.html' %}
+</div> -->

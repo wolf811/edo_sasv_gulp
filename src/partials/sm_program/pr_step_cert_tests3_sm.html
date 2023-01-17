@@ -1,0 +1,85 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Аттестационные испытания<br><small class=text-bold>Сварочное
+      оборудование</small></h6>
+  <!-- <p class="text-bold text-sm mb-1">Проверка характеристик СМ</p> -->
+  <div class="table-responsive">
+    <table class="table table-bordered text-center bg-white">
+      <tr class="table-active">
+        <!-- <th>Вид атт.</th> -->
+        <th>Наименование, марка и обозначение (модель, тип)</th>
+        <th>Род и полярность тока</th>
+        <th>Способ сварки (наплавки)</th>
+        <th>Действия</th>
+      </tr>
+      <tr>
+        <td>Lorem ipsum dolor sit</td>
+        <td>Lorem ipsum dolor sit</td>
+        <td>Lorem ipsum dolor sit</td>
+        <td>
+          <div class="btn-group btn-group-xs">
+            <div type="button" class="btn btn-outline-secondary" title="копировать"><i class="fa fa-clone"></i></div>
+            <div type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#so_for_tests_sm"
+              aria-expanded="false" aria-controls="so_for_tests_sm" title="заполнить"><i class="fa fa-pencil"></i>
+            </div>
+            <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr class="bg-light">
+        <td class="text-left" colspan="4">
+          <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="collapse"
+            data-target="#so_for_tests_sm" aria-expanded="false" aria-controls="so_for_tests_sm"><i
+              class="fa fa-plus mr-1"></i>Добавить данные</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="collapse show" id="so_for_tests_sm">
+    <div class="bg-white py-3 border">
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование, марка и
+          обозначение (модель, тип)</label>
+        <div class="col-sm-6">
+          <textarea rows="2" class="form-control form-control-sm"></textarea>
+        </div>
+      </div>
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Род и полярность
+          тока</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control form-control-sm">
+        </div>
+      </div>
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Способ сварки<small
+            class="text-warning ml-2">Заявка!!! Можно комбинировать для таблицы</small></label>
+        <div class="col-sm-6">
+          <div class="form-check form-check-sm form-check-inline">
+            <input type="checkbox" value="option1" class="form-check-input">
+            <label for="" class="form-check-label">РАД</label>
+          </div>
+          <div class="form-check form-check-sm form-check-inline">
+            <input type="checkbox" value="option1" class="form-check-input">
+            <label for="" class="form-check-label">МДП</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="ml-3">
+        <button type="button" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+        <a aria-controls="other_properties" aria-expanded="true" data-target="#other_properties" data-toggle="collapse"
+          href="#" class="btn btn-link btn-sm">Отмена</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <div>
+      <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+      <a href="#" type="button" class="btn btn-primary btn-sm disabled"><i
+          class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-1"></i>Скачать программу</a>
+  </div>
+</form>

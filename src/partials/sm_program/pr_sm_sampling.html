@@ -1,0 +1,73 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Отбор образцов СМ для аттестационных испытаний</h6>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование (место
+      отбора)<span class="text-danger">*</span></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm" required="">
+    </div>
+    <!-- <div class="col-sm-1">
+      <a href="#" class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modal-directory-org"
+        title="выбрать из справочника"><i class="fa fa-book"></i></a>
+    </div> -->
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Адрес места отбора<span
+        class="text-danger">*</span></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm" required="">
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Дата отбора</label>
+    <div class="col-sm-2">
+      <div id="sampling_date_picker" class="input-group form-date" data-picker="datepicker">
+        <input type="text" class="form-control form-control-sm js-datetimepicker" placeholder="дд.мм.гггг">
+        <div class="input-group-append">
+          <div id="sampling_date_picker_trigger" class="btn btn-outline-secondary btn-sm add-on"><i
+              class="fa fa-calendar"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Количество отбираемых
+      образцов СМ<span class="text-danger">*</span></label>
+    <div class="col-sm-6 col-xl-3">
+      <input type="text" class="form-control form-control-sm" placeholder="количество">
+    </div>
+    <!-- <div class="col-sm-6 col-xl-3">
+      <input type="text" class="form-control form-control-sm" placeholder="вес">
+    </div> -->
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Представитель
+      заявителя</label>
+    <div class="col-sm-6 col-xl-3">
+      <input type="text" class="form-control form-control-sm" placeholder="ФИО">
+    </div>
+    <div class="col-sm-6 col-xl-3">
+      <input type="text" class="form-control form-control-sm" placeholder="телефон, email">
+    </div>
+  </div>
+  <div class="form-group row align-items-center"><label for=""
+      class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Член аттестационной
+      комиссии АЦ</label>
+    <div class="col-sm-6 col-xl-3">
+      <select class="form-control form-control-sm">
+        <option value="opt1">-</option>
+        <option value="opt2">Фамилия Имя Отчество</option>
+        <option value="opt3">Фамилия Имя Отчество</option>
+        <option value="opt3">Фамилия Имя Отчество</option>
+      </select>
+    </div>
+    <div class="col-sm-6 col-xl-3">
+      <input type="text" class="form-control form-control-sm" placeholder="телефон, email">
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-1"></i>Скачать форму акта отбора</a>
+  </div>
+</form>

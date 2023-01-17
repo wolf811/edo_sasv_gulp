@@ -1,0 +1,91 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 v-if="direction == 'sm' || direction == 'so'" class="text-primary text-center mb-3">Формирование программы
+    аттестации</h6>
+  <!-- <h6 v-if="direction == 'st'" class="text-primary text-center mb-3">Формирование программы проверки готовности
+    организации</h6> -->
+  <div v-if="direction == 'sm' || direction == 'st'" class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ программы, дата</label>
+    <div class="col-sm-2">
+      <input type="text" class="form-control form-control-sm">
+    </div>
+    <div class="col-sm-2">
+      <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+    </div>
+  </div>
+  <div v-if="direction == 'so'">
+    <div class="form-group row">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ программы, дата <em
+          class="text-secondary">(наименование, марка СО1)</em></label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+      <div class="col-sm-2">
+        <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ программы, дата <em
+          class="text-secondary">(наименование, марка СО2)</em></label>
+      <div class="col-sm-2">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+      <div class="col-sm-2">
+        <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h6 class="text-primary text-center mb-3">Сведения из заявки</h6>
+  @include('info_from_application.html')
+  <hr>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Состав аттестационной
+      комиссии<span class="text-danger">*</span></label>
+    <div class="col-lg-8 col-xl-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td>Левченко Алексей Михайлович<div class="text-muted">IV уровень</div>
+            </td>
+            <td width=100 class="text-center">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="choice_boss" value="">
+                <label class="form-check-label" for="">Председатель</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Малолетков Алексей Владимирович<div class="text-muted">IV уровень</div>
+            </td>
+            <td width=100 class="text-center">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="choice_boss" value="">
+                <label class="form-check-label" for="">Председатель</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Шахматов Денис Михайлович<div class="text-muted">IV уровень</div>
+            </td>
+            <td width=100 class="text-center">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="choice_boss" value="">
+                <label class="form-check-label" for="">Председатель</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2>
+              <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+                data-target="#modal-comission-choice " title="выбрать состав комиссии">выбрать</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+  </div>
+</form>

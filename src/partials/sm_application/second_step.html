@@ -1,0 +1,207 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Данные о сварочных материалах</h6>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Вид СМ<span
+        class="text-danger">*</span></label>
+    <div class="col-sm-6 col-xl-4">
+      <select class="form-control form-control-sm">
+        <option value="opt0">выбрать</option>
+        <option value="opt1">Гз - Газы защитные</option>
+        <option value="opt2">Пп - Проволоки и ленты порошковые</option>
+        <option value="opt3">Пс - Проволоки и ленты сплошного сечения</option>
+        <option value="opt4">Ф - Флюсы</option>
+        <option value="opt5">Эп - Электроды плавящиеся</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Марка СМ<span
+        class="text-danger">*</span><i class="fa fa-info-circle text-secondary ml-1" data-container="body"
+        data-toggle="popover" data-placement="top" data-trigger="hover"
+        data-content="При отсутствии марки Гз указывают газ или газовые смеси, относящиеся к одной группе индексов по ГОСТ Р ИСО 14175"
+        data-original-title="" title=""></i></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm" required="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Классификационное
+      обозначение (тип)</label>
+    <div class="col-sm-6">
+      <textarea class="form-control form-control-sm" rows="2"></textarea>
+    </div>
+  </div>
+  <p class="text-warning text-sm mb-1">Поля "Типоразмеры" и "Состав" отображаются в зависимости от выбранного Вида СМ.
+    Для вида СМ - Ф, подобные поля не предусмотрены</p>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Типоразмер(ы)<small
+        class="text-warning ml-2">(для вида СМ: Эп, Пс, Пп)</small></label>
+    <div class="col-sm-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td colspan=2>
+              <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+                data-target="#modal-sizes-sm" title="выбрать способы сварки (наплавки)">выбрать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1.6; 2.0; 2.5</td>
+            <td width=100 class="text-center">
+              <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                  data-target="#modal-sizes-sm" title="изменить"><i class="fa fa-pencil"></i></button>
+                <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                    class="fa fa-times"></i></button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Состав<small
+        class="text-warning ml-2">(для вида СМ: Гз)</small></label>
+    <div class="col-sm-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td colspan=2>
+              <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+                data-target="#modal-gas-consist-sm" title="выбрать способы сварки (наплавки)">выбрать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>80% Ar</span>
+              <i class="fa fa-plus mx-1"></i>
+              <span>20% CO<sub>2</sub></span>
+            </td>
+            <td width=100 class="text-center">
+              <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                  data-target="#modal-gas-consist-sm" title="изменить"><i class="fa fa-pencil"></i></button>
+                <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                    class="fa fa-times"></i></button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Типоразмер(ы),
+      состав<small class="text-warning ml-2">(частично можно формализовать в зависимости от вида
+        СМ)</small></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm">
+    </div>
+  </div> -->
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Вид и марка сочетаемого
+      СМ</label>
+    <div class="col-sm-6">
+      <textarea class="form-control form-control-sm" rows="2"></textarea>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифр НД, устанавливающего
+      технические требования к СМ<small class="text-muted ml-2">(стандарт, технические условия и
+        т.д.)</small><small class="text-warning ml-2">(для производителя или предствителя производителя
+        СМ)</small></label>
+    <div class="col-sm-6">
+      <textarea class="form-control form-control-sm" rows="2"></textarea>
+    </div>
+  </div>
+  <hr>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Производитель СМ<span
+        class="text-danger">*</span><small class="text-warning ml-2">(только
+        для потребителя СМ)</small></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm" required="">
+    </div>
+    <div class="col-sm-1">
+      <a href="#" class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modal-directory-org"
+        title="выбрать из справочника"><i class="fa fa-book"></i></a>
+    </div>
+  </div>
+  <div class="party-block mb-3">
+    <div id="party_id" class="alert alert-light alert-dismissible fade show text-dark px-0">
+      <button type="button" class="close" title="удалить" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ партии, объем
+          партии,
+          дата выпуска<span class="text-danger">*</span><small class="text-warning ml-2">(только для
+            потребителя
+            СМ)</small></label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control form-control-sm" placeholder="№" required="">
+        </div>
+        <div class="col-sm-2">
+          <input type="text" class="form-control form-control-sm" placeholder="шт." required="">
+        </div>
+        <div class="col-sm-2">
+          <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+        </div>
+      </div>
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документ о качестве
+          (№, дата)<span class="text-danger">*</span><small class="text-warning ml-2">(только для потребителя
+            СМ)</small></label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control form-control-sm" placeholder="№" required="">
+        </div>
+        <div class="col-sm-2">
+          <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 offset-sm-5">
+        <button type="button" class="btn btn-xs btn-outline-primary"><i class="fa fa-plus mr-1"></i>Добавить
+          партию</button>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифры НД, регламентирующих
+      нормы оценки качества сварных соединений<small class="text-warning ml-2">(только для потребителя
+        СМ)</small></label>
+    <div class="col-sm-6">
+      <textarea class="form-control form-control-sm" rows="2"></textarea>
+    </div>
+  </div>
+  <hr>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Вид
+      аттестации<span class="text-danger">*</span></label>
+    <div class="col-sm-6 col-xl-3">
+      <select class="form-control form-control-sm">
+        <option value="opt1">Первичная</option>
+        <option selected value="opt2">Периодическая</option>
+        <option value="opt3">Дополнительная</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ свидетельства об
+      аттестации СМ<small class="text-warning ml-2">(при периодической или дополнительной
+        аттестации)</small></label>
+    <div class="col-sm-6 col-xl-3">
+      <input type="text" class="form-control form-control-sm">
+      <small class="form-text text-success">Свидетельство действительно до 21.08.2023</small>
+    </div>
+    <div class="col-sm-1">
+      <a href="#" title="найти в реестре" class="btn btn-outline-primary btn-xs"><i class="fa fa-search"></i></a>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+  </div>
+</form>

@@ -1,0 +1,131 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Область аттестации</h6>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Установленная область аттестации из
+      Свидетельства № АЦСМ-62-02302<span class="text-danger">*</span><small class="text-warning ml-2">(для периодической
+        и дополнительной аттестации)</small></label></label>
+    <div class="col-lg-8 col-xl-6">
+      <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+        data-target="#modal-established-area" title="просмотр области аттестации"><i
+          class="fa fa-eye mr-1"></i>Просмотреть</button>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Способы сварки (наплавки)<span
+        class="text-danger">*</span></label>
+    <div class="col-lg-8 col-xl-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td colspan=2>
+              <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+                data-target="#modal-choice-welding-method" title="выбрать способы сварки (наплавки)">выбрать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>РАД, МАДП (наплавка)</td>
+            <td width=100 class="text-center">
+              <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                  data-target="#modal-choice-welding-method" title="изменить"><i class="fa fa-pencil"></i></button>
+                <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                    class="fa fa-times"></i></button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Группы/подгруппы основных
+      материалов<span class="text-danger">*</span></label>
+    <div class="col-lg-8 col-xl-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td colspan=2>
+              <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+                data-target="#modal-choice-group-materials"
+                title="выбрать способы сварки (наплавки)">выбрать</button><small class="text-warning ml-2">Вариант
+                0</small>
+            </td>
+          </tr>
+          <tr>
+            <td><span>1 (1.1, 1.2, 1.3)</span><small class="text-warning ml-2">Вариант 1 для одной группы</small></td>
+            <td width=100 class="text-center">
+              <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                  data-target="#modal-choice-group-materials" title="изменить"><i class="fa fa-pencil"></i></button>
+                <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                    class="fa fa-times"></i></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>(1.1, 1.2, 1.3)</span>
+              <i class="fa fa-plus mx-1"></i>
+              <span>51 (51.1, 51.2)</span>
+              <small class="text-warning ml-2">Вариант 2 для сочетания</small>
+            </td>
+            <td width=100 class="text-center">
+              <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                  data-target="#modal-choice-group-materials" title="изменить"><i class="fa fa-pencil"></i></button>
+                <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                    class="fa fa-times"></i></button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Объекты<span
+        class="text-danger">*</span></label>
+    <div class="col-lg-8 col-xl-6">
+      <!-- {% include 'sasv/includes/objects_guide_sm_so.html' %} -->
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td colspan=2>
+              <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+                data-target="#modal-choice-objects" title="выбрать способы сварки (наплавки)">выбрать</button>
+            </td>
+          </tr>
+          <tr>
+            <td>ГО, ОХНВП</td>
+            <td width=100 class="text-center">
+              <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                  data-target="#modal-choice-objects" title="изменить"><i class="fa fa-pencil"></i></button>
+                <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                    class="fa fa-times"></i></button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h6 class="text-primary text-center mb-3">Дополнительные требования</h6>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Укажите дополнительные
+      требования<i class="fa fa-info-circle text-secondary ml-1" data-container="body" data-toggle="popover"
+        data-placement="top" data-trigger="hover"
+        data-content="Например, НД, регламентирующие требования к СМ для применения на конкретном(ых) объекте(ах), проверяемые характеристики СМ и т.д"></i></label>
+    <div class="col-sm-6">
+      <textarea class="form-control form-control-sm" rows="3"></textarea>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-2"></i>Скачать заявку</a>
+    <!-- <a href="#" class="btn btn-primary btn-sm" data-target="#modalRegistrationApplication"
+      data-toggle="modal"><i class="fa fa-clock-o mr-2"></i>Зарегистрировать заявку</a> -->
+  </div>
+</form>

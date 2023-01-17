@@ -7,12 +7,12 @@
   <div class="wrapper d-print-none">
     @include('partials/header.html')
     @include('partials/name-page.html', {
-      'title': 'Аттестация сварочных материалов'
+    'title': 'Аттестация САСв'
     })
     @include('partials/top-menu.html')
     @include('partials/breadcrumb.html')
     <div class="content">
-      @include('partials/filter-sm-list.html')
+      @include('partials/filter-list.html')
       <div class="container-fluid">
         <div class="bg-light border shadow-sm p-2 mb-3">
           <form class="form-inline" method="post" action="" novalidate>
@@ -48,8 +48,8 @@
             <tbody>
               <tr>
                 <td>
-                  <span class="fa-stack fa-lg text-secondary" data-toggle="popover" data-placement="right" data-trigger="hover"
-                    data-content="Новая">
+                  <span class="fa-stack fa-lg text-secondary" data-toggle="popover" data-placement="right"
+                    data-trigger="hover" data-content="Новая">
                     <i class="fa fa-file-o fa-stack-1x"></i>
                   </span>
                 </td>
@@ -62,8 +62,8 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
                       data-confirm="Вы уверены?"><i class="fa fa-download text-primary mr-1"></i>Скачать документы</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal"
-                      data-target="#modalRegistrationApplication"><i class="fa fa-clock-o text-info mr-1"></i>Зарегистрировать</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalRegistrationApplication"><i
+                        class="fa fa-clock-o text-info mr-1"></i>Зарегистрировать</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
                       data-confirm="Вы уверены?"><i class="fa fa-trash-o mr-1 text-danger"></i>Удалить</a>
@@ -81,7 +81,7 @@
                   <div>РД, РАД (наплавка)</div>
                   <div>3 (3.2) + 51 (51.1, 51.2)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td><em class="text-muted">не установлена</em></td>
                 <td class="text-left">
                   <div>
@@ -108,8 +108,8 @@
               </tr>
               <tr>
                 <td>
-                  <span class="fa-stack fa-lg text-secondary" data-toggle="popover" data-placement="right" data-trigger="hover"
-                    data-content="Новая от заявителя">
+                  <span class="fa-stack fa-lg text-secondary" data-toggle="popover" data-placement="right"
+                    data-trigger="hover" data-content="Новая от заявителя">
                     <i class="fa fa-file-o fa-stack-1x"></i>
                     <i>з</i>
                   </span>
@@ -120,12 +120,12 @@
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o mr-1"></i>Редактировать</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-clone mr-1"></i>Копировать</a>
-                                        <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
 
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalConfirmation"
                       data-confirm="Вы уверены?"><i class="fa fa-download text-primary mr-1"></i>Скачать документы</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal"
-                      data-target="#modalRegistrationApplication"><i class="fa fa-clock-o text-info mr-1"></i>Зарегистрировать</a>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalRegistrationApplication"><i
+                        class="fa fa-clock-o text-info mr-1"></i>Зарегистрировать</a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalComments"><i
                         class="fa fa-arrow-left text-danger mr-1"></i>Вернуть заявителю</a>
                     <div class="dropdown-divider"></div>
@@ -145,7 +145,7 @@
                   <div>РД, РАД (наплавка)</div>
                   <div>3 (3.2) + 51 (51.1, 51.2)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td><em class="text-muted">не установлена</em></td>
                 <td class="text-left">
                   <div>
@@ -172,8 +172,8 @@
               </tr>
               <tr>
                 <td>
-                  <i class="fa fa-clock-o fa-lg text-info" data-toggle="popover" data-placement="right" data-trigger="hover"
-                    data-content="Зарегистрирована"></i>
+                  <i class="fa fa-clock-o fa-lg text-info" data-toggle="popover" data-placement="right"
+                    data-trigger="hover" data-content="Зарегистрирована"></i>
                 </td>
                 <td>
                   <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -199,11 +199,11 @@
                 <td>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td class="text-left">
                   <div>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -242,8 +242,8 @@
 
               <tr>
                 <td>
-                  <i class="fa fa-arrow-right fa-lg text-primary" data-toggle="popover" data-placement="right" data-trigger="hover"
-                    data-content="Отправлена"></i>
+                  <i class="fa fa-arrow-right fa-lg text-primary" data-toggle="popover" data-placement="right"
+                    data-trigger="hover" data-content="Отправлена"></i>
                 </td>
                 <td>
                   <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -262,11 +262,11 @@
                 <td>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td class="text-left">
                   <div>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -304,8 +304,8 @@
               </tr>
               <tr>
                 <td rowspan="2">
-                  <i class="fa fa-check fa-lg text-success" data-toggle="popover" data-placement="right" data-trigger="hover"
-                    data-content="Размещено в реестре"></i>
+                  <i class="fa fa-check fa-lg text-success" data-toggle="popover" data-placement="right"
+                    data-trigger="hover" data-content="Размещено в реестре"></i>
                 </td>
                 <td rowspan="2">
                   <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -328,12 +328,12 @@
                   <div>ДИ (марка СО)</div>
                   <div>РД, <span class="text-danger">РАД (наплавка)</span></div>
                   <div>ГО, ОХНВП</div>
-              </td>
+                </td>
                 <td>
                   <div>ДИ+ДП/КС (марка СО)</div>
                   <div>РД</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td class="text-left">
                   <div>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -379,12 +379,12 @@
                   <div>ДИ (марка СО)</div>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, <span class="text-danger">ОХНВП</span></div>
-           </td>
+                </td>
                 <td>
                   <div>ДИ (марка СО)</div>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО</div>
-               </td>
+                </td>
                 <td class="text-left">
                   <div>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -426,8 +426,8 @@
               </tr>
               <tr>
                 <td rowspan=3>
-                  <i class="fa fa-times-circle fa-lg text-danger" data-toggle="popover" data-placement="right" data-trigger="hover"
-                    data-content="Отказ"></i>
+                  <i class="fa fa-times-circle fa-lg text-danger" data-toggle="popover" data-placement="right"
+                    data-trigger="hover" data-content="Отказ"></i>
                 </td>
                 <td rowspan=3>
                   <a href="#" class="text-primary dropdown-toggle" data-toggle="dropdown" title="Действия"><i
@@ -448,7 +448,7 @@
                   <div>ДИ+ДП/КС (марка СО)</div>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td><em class="text-muted">не установлена</em></td>
                 <td class="text-left">
                   <div>
@@ -480,11 +480,13 @@
                   </div>
                 </td>
                 <td>
-                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Акт
+                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Акт
                     экспертизы</a>
                 </td>
                 <td rowspan=3 class="text-secondary" style="max-width: 150px;">
-                  <strong class="mr-1">НАКС (Кузнецов П.С.):</strong><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                  <strong class="mr-1">НАКС (Кузнецов П.С.):</strong><em>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Modi
                     eius vel repellat provident nam impedit optio. </em>
                 </td>
               </tr>
@@ -494,7 +496,7 @@
                   <div>ДИ (марка СО)</div>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td><em class="text-muted">не установлена</em></td>
                 <td class="text-left">
                   <div>
@@ -526,7 +528,8 @@
                   </div>
                 </td>
                 <td>
-                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Акт
+                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Акт
                     экспертизы</a>
                 </td>
               </tr>
@@ -536,7 +539,7 @@
                   <div>ДИ (марка СО)</div>
                   <div>РД, РАД (наплавка)</div>
                   <div>ГО, ОХНВП</div>
-           </td>
+                </td>
                 <td><em class="text-muted">не установлена</em></td>
                 <td class="text-left">
                   <div>
@@ -568,7 +571,8 @@
                   </div>
                 </td>
                 <td>
-                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1" aria-hidden="true"></i>Акт
+                  <a href="#" class="text-danger" target="_blank"><i class="fa fa-file-text-o mr-1"
+                      aria-hidden="true"></i>Акт
                     экспертизы</a>
                 </td>
               </tr>

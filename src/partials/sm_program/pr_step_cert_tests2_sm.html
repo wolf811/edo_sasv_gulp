@@ -1,0 +1,39 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Аттестационные испытания<br><small class=text-bold>Сварка, контроль,
+      испытания и исследования КСС</small></h6>
+  <p class="text-info text-bold text-sm mb-1">Данные о КСС<small class="text-warning ml-2">(количество строк зависит от
+      количества способов сварки)</small></p>
+  {% include "sasv/includes/program/cert_tests_kss_info.html" %}
+  <p class="text-info text-bold text-sm mb-1">Контроль, испытания и исследования КСС</p>
+  {% include "sasv/includes/program/cert_tests_controls_info.html" %}
+  <p class="text-info text-bold text-sm mb-1">Неразрушающий контроль КСС<small class="text-warning ml-2">(При аттестации
+      Гз
+      проводят только неразрушающий контроль КСС)</small></p>
+  {% include "sasv/includes/program/cert_tests_nk_control_info.html" %}
+  <p class="text-info text-bold text-sm mb-1">Разрушающие испытания и исследования КСС<small
+      class="text-warning ml-2">(При
+      аттестации Эп, Пс, Пп и Ф для определения свойств наплавленного металла (металла шва) проводят след.
+      испытания и исследования КСС)</small></p>
+  <p class="text-info text-sm mb-1">а) химический состав наплавленного металла</p>
+  {% include "sasv/includes/program/cert_tests_chemical_composition_info.html" %}
+  <div class="text-warning text-sm ml-2">При <b>периодичекой аттестации</b> СМ определяют <b>только химический
+      состав</b> наплавленного металла (металла шва)</div>
+  <p class="text-info text-sm mb-1">б) механические свойства наплавленного металла</p>
+  {% include "sasv/includes/program/cert_tests_mechanical_properties_metal.html" %}
+  <p class="text-info text-sm mb-1">в) механические свойства металла шва</p>
+  {% include "sasv/includes/program/cert_tests_mechanical_properties_seam.html" %}
+  <p class="text-info text-sm mb-1">г) содержание ферритной фазы в наплавленном металле (металле шва)</p>
+  {% include "sasv/includes/program/cert_tests_ferrite_phase.html" %}
+  <p class="text-info text-sm mb-1">д) стойкость к межкристаллитной коррозии наплавленного металла (металла шва)</p>
+  {% include "sasv/includes/program/cert_tests_corrosion_resistance.html" %}
+  <p class="text-info text-sm mb-1">е) содержание диффузионного водорода в наплавленном металле</p>
+  {% include "sasv/includes/program/cert_tests_hydrogen_content.html" %}
+  <p class="text-info text-sm mb-1">Название испытания/исследования</p>
+  {% include "sasv/includes/program/cert_tests_other_properties.html" %}
+  <button type="button" class="btn btn-outline-primary btn-sm" data-target="#modal-other-properties"
+    data-toggle="modal"><i class="fa fa-plus mr-1"></i>Добавить другие свойства</button>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+  </div>
+</form>

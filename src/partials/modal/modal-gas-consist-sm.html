@@ -1,0 +1,126 @@
+<div class="modal fade" id="modal-gas-consist-sm" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Состав</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="" method="get">
+        <div class="modal-body">
+          <p class="text-sm mb-1">Укажите состав газа(ов):</p>
+          <div class="scrollspy-modal">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover table-sm text-center">
+                <tr class="table-active">
+                  <th>Содержание газа, %</th>
+                  <th>Газ</th>
+                  <th>Действия</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="text" class="form-control form-control-sm text-center">
+                  </td>
+                  <td>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">Ar</label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">He</label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">CO<sub>2</sub></label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">O<sub>2</sub></label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">N<sub>2</sub></label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">H<sub>2</sub></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-outline-secondary" title="добавить"><i
+                          class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                          class="fa fa-times"></i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="text" class="form-control form-control-sm text-center">
+                  </td>
+                  <td>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas2" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">Ar</label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas2" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">He</label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas2" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">CO<sub>2</sub></label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas2" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">O<sub>2</sub></label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas2" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">N<sub>2</sub></label>
+                    </div>
+                    <div class="form-check form-check-inline form-check-sm">
+                      <input type="radio" name="gas2" value="option1" class="form-check-input">
+                      <label for="" class="form-check-label">H<sub>2</sub></label>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-outline-secondary" title="добавить"><i
+                          class="fa fa-plus"></i></button>
+                      <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                          class="fa fa-times"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="form-group">
+              <label for="" class="col-form-label col-form-label-sm">ИЛИ указать вручную:</label>
+              <input type="text" class="form-control form-control-sm w-lg-50">
+            </div>
+
+
+            <!-- <hr>
+            <p class="text-warning mb-1">Вид СМ: <b>Пс, Пп</b></p>
+            <div class="form-group">
+              <label for="" class="col-form-label col-form-label-sm text-bold">Указать диаметры/сечение:</label>
+              <select class="form-control form-control-sm w-50" required>
+                <option value="">-</option>
+                <option value="">Диаметры</option>
+                <option value="">Сечение</option>
+              </select>
+            </div> -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-outline-secondary btn-sm" data-dismiss="modal" role="button">Закрыть</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
