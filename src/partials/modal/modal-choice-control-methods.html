@@ -1,0 +1,75 @@
+<div class="modal fade" id="modal-choice-control-methods" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Методы неразрушающего контроля</h5>
+        <h5 class="modal-title">Виды разрушающих испытаний и исследований</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="" method="get">
+        <div class="modal-body">
+          <div class="scrollspy-modal">
+            <div class="bg-light shadow-sm p-3 mb-3">
+              <div class="form-group">
+                <label for="" class="col-form-label-sm">Метод НК</label>
+                <select class="form-control form-control-sm">
+                  <option value="opt0">-</option>
+                  <option value="opt1">АЭ - Акустико-эмиссионный</option>
+                  <option value="opt1">ВД - Вибродиагностический</option>
+                  <option value="opt1">ВИК - Визуальный и измерительный</option>
+                  <option value="opt1">РК - Радиографический</option>
+                  <option value="opt1">АЭ - Акустико-эмиссионный</option>
+                  <option value="opt2">УК - Ультразвуковой</option>
+                  <option value="opt1">Другой метод</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-form-label-sm">Другое испытание/исследование<small
+                    class="text-warning ml-2">(выбор Другой из select)</small></label>
+                <input type="text" class="form-control form-control-sm">
+              </div>
+              <div class="form-group">
+                <label for="" class="col-form-label-sm">Документ, регламентирующий методику НК</label>
+                <textarea rows="2" class="form-control form-control-sm"></textarea>
+              </div>
+            </div>
+            <p class="text-warning text-sm mt-2">ИЛИ</p>
+            <div class="bg-light shadow-sm p-3 mb-3">
+              <div class="form-group">
+                <label for="" class="col-form-label-sm">Вид разрушающих испытаний и исследований</label>
+                <select class="form-control form-control-sm">
+                  <option value="opt0">-</option>
+                  <option value="opt1">испытание</option>
+                  <option value="opt1">исследование</option>
+                  <option value="opt1">испытание</option>
+                  <option value="opt1">исследование</option>
+                  <option value="opt1">Другое испытание/исследование</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-form-label-sm">Другое испытание/исследование<small
+                    class="text-warning ml-2">(выбор Другое из select)</small></label>
+                <input type="text" class="form-control form-control-sm">
+              </div>
+              <div class="form-group">
+                <label for="" class="col-form-label-sm">Документ, регламентирующий методику разрушающих
+                  испытаний и исследований</label>
+                <textarea rows="2" class="form-control form-control-sm"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-outline-primary btn-xs"><i class="fa fa-plus mr-1"></i>Добавить</button>
+            <!-- {% include 'sasv/includes/control_methods_guide.html' %}
+            <p class="text-sm text-bold mb-1">Виды разрушающих испытаний и исследований</p>
+            {% include 'sasv/includes/types_destructive_tests_guide.html' %} -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-outline-secondary btn-sm" data-dismiss="modal" role="button">Закрыть</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

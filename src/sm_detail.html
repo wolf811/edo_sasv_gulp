@@ -12,7 +12,7 @@
     @include('partials/top-menu.html')
     @include('partials/breadcrumb.html')
     <div class="content">
-      <div class="accordion accordion-main" id="accordionCase">
+      <div class="accordion accordion-main" id="accordionCaseSm">
         <div class="card">
           <a href="#" class="card-header active" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
             aria-expanded="true" aria-controls="collapseOne">
@@ -27,20 +27,17 @@
               </div>
             </div>
           </a>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCase">
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCaseSm">
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-3 col-xl-2">
                   <div class="nav nav-vertical-case flex-column sticky-top bg-light shadow-sm text-sm mb-3"
                     id="caseEditAppl" role="tablist" aria-orientation="vertical">
-                    <a @click.prevent="setActive('#appl-one-tab')" class="nav-link active" id="appl-one-tab"
-                      data-toggle="pill" href="#appl-one" role="tab" aria-controls="appl-one"
-                      aria-selected="true">Сведения о заявителе
+                    <a class="nav-link active" id="appl-one-tab" data-toggle="pill" href="#appl-one" role="tab"
+                      aria-controls="appl-one" aria-selected="true">Сведения о заявителе
                       <small class="text-warning ml-2">(для ЛК АЦ)</small></a>
-                    <a @click.prevent="setActive('#appl-two-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="appl-two-tab" data-toggle="pill" href="#appl-two" role="tab" aria-controls="appl-two"
-                      aria-selected="false">Данные о
-                      сварочных материалах</a>
+                    <a class="nav-link" id="appl-two-tab" data-toggle="pill" href="#appl-two" role="tab"
+                      aria-controls="appl-two" aria-selected="false">Данные о сварочных материалах</a>
                     <!-- <a @click.prevent="setActive('#appl-three-tab')" v-if="direction == 'so'" class="nav-link"
                       id="appl-three-tab" data-toggle="pill" href="#appl-three" role="tab" aria-controls="appl-three"
                       aria-selected="false">Сведения о сварочном
@@ -49,9 +46,9 @@
                       id="appl-four-tab" data-toggle="pill" href="#appl-four" role="tab" aria-controls="appl-four"
                       aria-selected="false">Сведения о ПТД
                       <small class="text-warning ml-2">(для СТ)</small></a> -->
-                    <a @click.prevent="setActive('#appl-five-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="appl-five-tab" data-toggle="pill" href="#appl-five" role="tab" aria-controls="appl-five"
-                      aria-selected="false">Область аттестации<small class="text-warning ml-2">(СМ)</small></a>
+                    <a class="nav-link" id="appl-five-tab" data-toggle="pill" href="#appl-five" role="tab"
+                      aria-controls="appl-five" aria-selected="false">Область аттестации<small
+                        class="text-warning ml-2">(СМ)</small></a>
                     <!-- <a @click.prevent="setActive('#appl-six-tab')" v-if="direction == 'st'" class="nav-link" id="appl-six-tab"
                       data-toggle="pill" href="#appl-six" role="tab" aria-controls="appl-six" aria-selected="false">Область
                       аттестации<small class="text-warning ml-2">(СТ)</small></a> -->
@@ -106,7 +103,7 @@
             </div>
           </div>
         </div>
-        <div v-if="status == 'ac'" class="card">
+        <div class="card">
           <a href="#" class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <div class="container">
@@ -120,20 +117,17 @@
               </div>
             </div>
           </a>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionCase">
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionCaseSm">
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-3 col-xl-2">
                   <div class="nav nav-vertical-case flex-column sticky-top bg-light shadow-sm text-sm mb-3"
                     id="caseEditProgram" role="tablist" aria-orientation="vertical">
-                    <a @click.prevent="setActive('#pr-zero-tab')" class="nav-link active" id="pr-zero-tab"
-                      data-toggle="pill" href="#pr-zero" role="tab" aria-controls="pr-zero"
-                      aria-selected="true">Сведения из заявки,
-                      аттестационная комиссия<small class="text-warning ml-2">(СМ, СО, СТ)</small></a>
-                    <a @click.prevent="setActive('#pr-one-sm-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="pr-one-sm-tab" data-toggle="pill" href="#pr-one-sm" role="tab" aria-controls="pr-one-sm"
-                      aria-selected="true">Отбор образцов СМ для аттестационных
-                      испытаний</a>
+                    <a class="nav-link active" id="pr-zero-tab" data-toggle="pill" href="#pr-zero" role="tab"
+                      aria-controls="pr-zero" aria-selected="true">Сведения из заявки, аттестационная комиссия<small
+                        class="text-warning ml-2">(СМ, СО, СТ)</small></a>
+                    <a class="nav-link" id="pr-one-sm-tab" data-toggle="pill" href="#pr-one-sm" role="tab"
+                      aria-controls="pr-one-sm" aria-selected="true">Отбор образцов СМ для аттестационных испытаний</a>
                     <!-- <a @click.prevent="setActive('#pr-one-so-tab')" v-if="direction == 'so'" class="nav-link"
                       id="pr-one-so-tab" data-toggle="pill" href="#pr-one-so" role="tab" aria-controls="pr-one-so"
                       aria-selected="true">Отбор единиц СО для аттестационных
@@ -141,18 +135,15 @@
                     <a @click.prevent="setActive('#pr-one-st-tab')" v-if="direction == 'st'" class="nav-link"
                       id="pr-one-st-tab" data-toggle="pill" href="#pr-one-st" role="tab" aria-controls="pr-one-st"
                       aria-selected="true">Места и сроки проведения проверки готовности организации</a> -->
-                    <a @click.prevent="setActive('#pr-two-sm1-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="pr-two-sm1-tab" data-toggle="pill" href="#pr-two-sm1" role="tab" aria-controls="pr-two-sm1"
-                      aria-selected="false">Аттестационные
-                      испытания: проверка характеристик СМ</a>
-                    <a @click.prevent="setActive('#pr-two-sm2-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="pr-two-sm2-tab" data-toggle="pill" href="#pr-two-sm2" role="tab" aria-controls="pr-two-sm2"
-                      aria-selected="false">Аттестационные
-                      испытания: сварка, контроль, испытания и исследования КСС</a>
-                    <a @click.prevent="setActive('#pr-two-sm3-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="pr-two-sm3-tab" data-toggle="pill" href="#pr-two-sm3" role="tab" aria-controls="pr-two-sm3"
-                      aria-selected="false">Аттестационные
-                      испытания: сварочное оборудование</a>
+                    <a class="nav-link" id="pr-two-sm1-tab" data-toggle="pill" href="#pr-two-sm1" role="tab"
+                      aria-controls="pr-two-sm1" aria-selected="false">Аттестационные испытания: проверка характеристик
+                      СМ</a>
+                    <a class="nav-link" id="pr-two-sm2-tab" data-toggle="pill" href="#pr-two-sm2" role="tab"
+                      aria-controls="pr-two-sm2" aria-selected="false">Аттестационные испытания: сварка, контроль,
+                      испытания и исследования КСС</a>
+                    <a class="nav-link" id="pr-two-sm3-tab" data-toggle="pill" href="#pr-two-sm3" role="tab"
+                      aria-controls="pr-two-sm3" aria-selected="false">Аттестационные испытания: сварочное
+                      оборудование</a>
                     <!-- <a @click.prevent="setActive('#pr-tests-so-tab')" v-if="direction == 'so'" class="nav-link"
                       id="pr-tests-so-tab" data-toggle="pill" href="#pr-tests-so" role="tab" aria-controls="pr-tests-so"
                       aria-selected="false">Аттестационные
@@ -197,7 +188,7 @@
             </div>
           </div>
         </div>
-        <div v-if="status == 'ac'" class="card">
+        <div class="card">
           <a href="#" class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseTrhee"
             aria-expanded="true" aria-controls="collapseTrhee">
             <div class="container">
@@ -211,47 +202,41 @@
               </div>
             </div>
           </a>
-          <div id="collapseTrhee" class="collapse" aria-labelledby="headingThree" data-parent="#accordionCase">
+          <div id="collapseTrhee" class="collapse" aria-labelledby="headingThree" data-parent="#accordionCaseSm">
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-3 col-xl-2">
                   <div class="nav nav-vertical-case flex-column sticky-top bg-light shadow-sm text-sm mb-3"
                     id="caseEditProgram" role="tablist" aria-orientation="vertical">
-                    <a @click.prevent="setActive('#protocol-zero-tab')" class="nav-link active" id="protocol-zero-tab"
-                      data-toggle="pill" href="#protocol-zero" role="tab" aria-controls="protocol-zero"
-                      aria-selected="true">Сведения из заявки,
-                      аттестационная комиссия<small class="text-warning ml-2">(СМ, СО, СТ)</small></a>
-                    <a @click.prevent="setActive('#protocol-proizv-sm-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="protocol-proizv-sm-tab" data-toggle="pill" href="#protocol-proizv-sm" role="tab"
-                      aria-controls="protocol-proizv-sm" aria-selected="true">Результаты проверки технических
+                    <a class="nav-link active" id="protocol-zero-tab" data-toggle="pill" href="#protocol-zero"
+                      role="tab" aria-controls="protocol-zero" aria-selected="true">Сведения из заявки, аттестационная
+                      комиссия<small class="text-warning ml-2">(СМ, СО, СТ)</small></a>
+                    <a class="nav-link" id="protocol-proizv-sm-tab" data-toggle="pill" href="#protocol-proizv-sm"
+                      role="tab" aria-controls="protocol-proizv-sm" aria-selected="true">Результаты проверки технических
                       возможностей
-                      производителя<small class="text-warning ml-2">(только для производителя и
-                        представителя производителя СМ, если ранее не проводилась)</small></a>
-                    <a @click.prevent="setActive('#protocol-one-sm-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="protocol-one-sm-tab" data-toggle="pill" href="#protocol-one-sm" role="tab"
-                      aria-controls="protocol-one-sm" aria-selected="true">Результаты отбора
-                      образцов СМ для аттестационных испытаний</a>
-                    <a @click.prevent="setActive('#protocol-one-so-tab')" v-if="direction == 'so'" class="nav-link"
+                      производителя<small class="text-warning ml-2">(только для производителя и представителя
+                        производителя СМ, если ранее не проводилась)</small></a>
+                    <a class="nav-link" id="protocol-one-sm-tab" data-toggle="pill" href="#protocol-one-sm" role="tab"
+                      aria-controls="protocol-one-sm" aria-selected="true">Результаты отбора образцов СМ для
+                      аттестационных испытаний</a>
+                    <!-- <a @click.prevent="setActive('#protocol-one-so-tab')" v-if="direction == 'so'" class="nav-link"
                       id="protocol-one-so-tab" data-toggle="pill" href="#protocol-one-so" role="tab"
                       aria-controls="protocol-one-so" aria-selected="true">Сведения об отборе
-                      единиц СО для аттестационных испытаний</a>
-                    <a @click.prevent="setActive('#protocol-two-sm1-tab')" v-if="direction == 'sm'" class="nav-link"
-                      id="protocol-two-sm1-tab" data-toggle="pill" href="#protocol-two-sm1" role="tab"
+                      единиц СО для аттестационных испытаний</a> -->
+                    <a class="nav-link" id="protocol-two-sm1-tab" data-toggle="pill" href="#protocol-two-sm1" role="tab"
                       aria-controls="protocol-two-sm1" aria-selected="false">Результаты аттестационных испытаний СМ</a>
-                    <a @click.prevent="setActive('#protocol-two-so-tab')" v-if="direction == 'so'" class="nav-link"
+                    <!-- <a @click.prevent="setActive('#protocol-two-so-tab')" v-if="direction == 'so'" class="nav-link"
                       id="protocol-two-so-tab" data-toggle="pill" href="#protocol-two-so" role="tab"
                       aria-controls="protocol-two-so" aria-selected="false">Результаты
-                      аттестационных испытаний СО</a>
-                    <a @click.prevent="setActive('#protocol-two-st-tab')" v-if="direction == 'st'" class="nav-link"
+                      аттестационных испытаний СО</a> -->
+                    <!-- <a @click.prevent="setActive('#protocol-two-st-tab')" v-if="direction == 'st'" class="nav-link"
                       id="protocol-two-st-tab" data-toggle="pill" href="#protocol-two-st" role="tab"
                       aria-controls="protocol-two-st" aria-selected="false">Результаты
-                      аттестационных испытаний СТ</a>
-                    <a @click.prevent="setActive('#protocol-sm-confirmed-area-tab')" v-if="direction == 'sm'"
-                      class="nav-link" id="protocol-sm-confirmed-area-tab" data-toggle="pill"
+                      аттестационных испытаний СТ</a> -->
+                    <a class="nav-link" id="protocol-sm-confirmed-area-tab" data-toggle="pill"
                       href="#protocol-sm-confirmed-area" role="tab" aria-controls="protocol-sm-confirmed-area"
-                      aria-selected="false">Установленная
-                      область аттестации СМ</a>
-                    <a @click.prevent="setActive('#protocol-so-confirmed-area-tab')" v-if="direction == 'so'"
+                      aria-selected="false">Установленная область аттестации СМ</a>
+                    <!-- <a @click.prevent="setActive('#protocol-so-confirmed-area-tab')" v-if="direction == 'so'"
                       class="nav-link" id="protocol-so-confirmed-area-tab" data-toggle="pill"
                       href="#protocol-so-confirmed-area" role="tab" aria-controls="protocol-so-confirmed-area"
                       aria-selected="false">Установленная
@@ -260,42 +245,42 @@
                       class="nav-link" id="protocol-st-confirmed-area-tab" data-toggle="pill"
                       href="#protocol-st-confirmed-area" role="tab" aria-controls="protocol-st-confirmed-area"
                       aria-selected="false">Установленная
-                      область аттестации СТ</a>
+                      область аттестации СТ</a> -->
                   </div>
                 </div>
                 <div class="col-lg-9 col-xl-8">
-                  {% include 'sasv/includes/alert-check-error.html' %}
+                  <!-- {% include 'sasv/includes/alert-check-error.html' %} -->
                   <div class="tab-content" id="caseEditProtocolContent">
                     <div class="tab-pane fade show active" id="protocol-zero" role="tabpanel"
                       aria-labelledby="protocol-zero-tab">
-                      {% include 'sasv/includes/protocol/protocol_zero_step.html' %}</div>
+                      @include('partials/sm_protocol/protocol_zero_step.html')</div>
                     <div class="tab-pane fade show" id="protocol-proizv-sm" role="tabpanel"
                       aria-labelledby="protocol-proizv-sm-tab">
-                      {% include 'sasv/includes/protocol/checking-proizv-sm.html' %}</div>
+                      @include('partials/sm_protocol/checking-proizv-sm.html')</div>
                     <div class="tab-pane fade show" id="protocol-one-sm" role="tabpanel"
                       aria-labelledby="protocol-one-sm-tab">
-                      {% include 'sasv/includes/protocol/protocol_sm_sampling.html' %}</div>
-                    <div class="tab-pane fade show" id="protocol-one-so" role="tabpanel"
+                      @include('partials/sm_protocol/protocol_sm_sampling.html')</div>
+                    <!-- <div class="tab-pane fade show" id="protocol-one-so" role="tabpanel"
                       aria-labelledby="protocol-one-so-tab">
-                      {% include 'sasv/includes/protocol/protocol_so_sampling.html' %}</div>
+                      {% include 'sasv/includes/protocol/protocol_so_sampling.html' %}</div> -->
                     <div class="tab-pane fade" id="protocol-two-sm1" role="tabpanel"
                       aria-labelledby="protocol-two-sm1-tab">
-                      {% include 'sasv/includes/protocol/protocol_sm_test_results.html' %}</div>
-                    <div class="tab-pane fade" id="protocol-two-so" role="tabpanel"
+                      @include('partials/sm_protocol/protocol_sm_test_results.html')</div>
+                    <!-- <div class="tab-pane fade" id="protocol-two-so" role="tabpanel"
                       aria-labelledby="protocol-two-so-tab">
                       {% include 'sasv/includes/protocol/protocol_so_test_results.html' %}</div>
                     <div class="tab-pane fade" id="protocol-two-st" role="tabpanel"
                       aria-labelledby="protocol-two-st-tab">
-                      {% include 'sasv/includes/protocol/protocol_st_test_results.html' %}</div>
+                      {% include 'sasv/includes/protocol/protocol_st_test_results.html' %}</div> -->
                     <div class="tab-pane fade" id="protocol-sm-confirmed-area" role="tabpanel"
                       aria-labelledby="protocol-sm-confirmed-area-tab">
-                      {% include 'sasv/includes/protocol/protocol_sm_confirmed_area.html' %}</div>
-                    <div class="tab-pane fade" id="protocol-so-confirmed-area" role="tabpanel"
+                      @include('partials/sm_protocol/protocol_sm_confirmed_area.html')</div>
+                    <!-- <div class="tab-pane fade" id="protocol-so-confirmed-area" role="tabpanel"
                       aria-labelledby="protocol-so-confirmed-area-tab">
                       {% include 'sasv/includes/protocol/protocol_so_confirmed_area.html' %}</div>
                     <div class="tab-pane fade" id="protocol-st-confirmed-area" role="tabpanel"
                       aria-labelledby="protocol-st-confirmed-area-tab">
-                      {% include 'sasv/includes/protocol/protocol_st_confirmed_area.html' %}</div>
+                      {% include 'sasv/includes/protocol/protocol_st_confirmed_area.html' %}</div> -->
                   </div>
                 </div>
                 <div class="d-none d-xl-block col-xl-2">
@@ -309,7 +294,7 @@
             </div>
           </div>
         </div>
-        <div v-if="status == 'ac' && direction == 'st'" class="card">
+        <!-- <div v-if="status == 'ac' && direction == 'st'" class="card">
           <a href="#" class="card-header" id="headingFour" data-toggle="collapse" data-target="#collapseFour"
             aria-expanded="true" aria-controls="collapseFour">
             <div class="container">
@@ -323,7 +308,7 @@
               </div>
             </div>
           </a>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionCase">
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionCaseSm">
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-3 col-xl-2">
@@ -367,7 +352,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -384,6 +369,10 @@
   @include('partials/modal/modal-established-area.html')
   @include('partials/modal/modal-choice-welding-method.html')
   @include('partials/modal/modal-choice-objects.html')
+  @include('partials/modal/modal-metal-properties.html')
+  @include('partials/modal/modal-choice-control-methods.html')
+  @include('partials/modal/modal-other-properties.html')
+  @include('partials/modal/modal-comission-choice.html')
 </body>
 
 </html>

@@ -1,0 +1,56 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Отбор образцов СМ для аттестационных испытаний</h6>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Отбор проведен</label>
+    <div class="col-sm-6">
+      <div class="form-check form-check-inline form-check-sm">
+        <input name="sampling" type="radio" value="option1" class="form-check-input" checked>
+        <label for="" class="form-check-label">Да</label>
+      </div>
+      <div class="form-check form-check-inline form-check-sm">
+        <input name="sampling" type="radio" value="option2" class="form-check-input">
+        <label for="" class="form-check-label">Нет</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Указать причину<small
+        class="text-warning ml-2">(если НЕТ)</small></label>
+    <div class="col-sm-6">
+      <textarea rows="2" class="form-control form-control-sm"></textarea>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Результаты отбора образцов СМ<small
+        class="text-muted ml-2">(согласно сведений о партии из акта отбора образцов СМ)</small><small
+        class="text-warning ml-2">(если ДА)</small></label>
+    <div class="col-xl-6">
+      <div class="table-responsive">
+        <table class="table table-bordered text-center bg-white">
+          <tr>
+            <td width="100">
+              <input type="text" class="form-control form-control-sm text-center" placeholder="№пп">
+            </td>
+            <td>
+              <input type="text" class="form-control form-control-sm text-center" placeholder="№ партии">
+            </td>
+            <td width="150">
+              <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+            </td>
+            <td width="100">
+              <div class="btn-group btn-group-xs">
+                <div type="button" class="btn btn-outline-secondary" title="добавить"><i class="fa fa-plus"></i></div>
+                <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+  <a href="#" class="btn btn-primary btn-sm disabled" type="button"><i
+      class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+</form>

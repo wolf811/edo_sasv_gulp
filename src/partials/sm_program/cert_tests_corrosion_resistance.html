@@ -1,0 +1,131 @@
+<div class="form-check form-check-inline form-check-sm">
+  <input type="checkbox" value="option1" class="form-check-input">
+  <label for="" class="form-check-label"><em>испытания не проводятся, согласно требований в НД, регламентирующих нормы
+      оценки качества сварных соединений на заявленном(ых) объекте(ах)</em></label>
+</div>
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <!-- <th>Вид атт.</th> -->
+      <th>Обозначение КСС</th>
+      <th>Вид разрушающего испытания</th>
+      <th>Оборудование для испытаний</th>
+      <th>Тип образца для испытаний</th>
+      <th>Документы, регламентирующие методику испытаний</th>
+      <th>Документы, регламентирующие нормы оценки качества</th>
+      <th>Действия</th>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>
+        <div class="btn-group btn-group-xs">
+          <div type="button" class="btn btn-outline-secondary" title="копировать"><i class="fa fa-clone"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" data-toggle="collapse"
+            data-target="#corrosion_resistance" aria-expanded="false" aria-controls="corrosion_resistance"
+            title="заполнить">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="bg-light">
+      <td class="text-left" colspan="7">
+        <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="collapse"
+          data-target="#corrosion_resistance" aria-expanded="false" aria-controls="corrosion_resistance"><i
+            class="fa fa-plus mr-1"></i>Добавить данные</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="mb-3 collapse" id="corrosion_resistance">
+  <div class="bg-white py-3 border">
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<small
+          class="text-warning ml-2">см. 'Данные о КСС'!!!</small></label>
+      <div class="col-sm-3">
+        <select class="form-control form-control-sm">
+          <option value="opt0">-</option>
+          <option value="opt1">КСС 1</option>
+          <option value="opt2">КСС 2</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">
+        <p class="mb-1">Виды разрушающих испытаний</p>
+        <p class="mb-0">Документы, регламентирующие методику испытаний</p>
+      </label>
+      <div class="col-sm-6">
+        <div class="table-responsive">
+          <table class="table table-bordered bg-white">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="method_nk_for_kss" value="option1" class="form-check-input">
+                    <label for="" class="form-check-label text-bold">испытание</label>
+                  </div>
+                </td>
+                <td class="text-center">документ, регламентирующий методику испытаний</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="method_nk_for_kss" value="option1" class="form-check-input">
+                    <label for="" class="form-check-label text-bold">испытание</label>
+                  </div>
+                </td>
+                <td class="text-center">документ, регламентирующий методику испытаний</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="method_nk_for_kss" value="option1" class="form-check-input">
+                    <label for="" class="form-check-label text-bold">испытание</label>
+                  </div>
+                </td>
+                <td class="text-center">документ, регламентирующий методику испытаний</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Оборудование для
+        испытаний</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Тип образца для
+        испытаний</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документы,
+        регламентирующий нормы оценки качества КСС</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"
+          value="перечислены документы, указанные ранее"></textarea>
+      </div>
+    </div>
+    <hr>
+    <div class="ml-3">
+      <button type="button" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+      <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#corrosion_resistance"
+        aria-expanded="false" aria-controls="corrosion_resistance">Отмена</a>
+    </div>
+  </div>
+</div>

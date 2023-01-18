@@ -1,0 +1,114 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Установленная область аттестации</h6>
+  <p class="text-sm text-warning">При изменении области аттестации, в модальных окнах, оставлять активными только
+    отмеченные элементы (заявленные)</p>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Способы сварки (наплавки)</label>
+    <div class="col-lg-8 col-xl-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td>РАД, МАДП (наплавка)</td>
+            <td width=100 class="text-center">
+              <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                data-target="#modal-choice-welding-method" title="изменить"><i
+                  class="fa fa-pencil mr-1"></i>изменить</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Группы/подгруппы основных
+      материалов</label>
+    <div class="col-lg-8 col-xl-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td><span>1 (1.1, 1.2, 1.3)</span><small class="text-warning ml-2">Вариант 1 для одной группы</small></td>
+            <td width=100 class="text-center">
+              <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                data-target="#modal-choice-group-materials" title="изменить"><i
+                  class="fa fa-pencil mr-1"></i>изменить</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>(1.1, 1.2, 1.3)</span>
+              <i class="fa fa-plus mx-1"></i>
+              <span>51 (51.1, 51.2)</span>
+              <small class="text-warning ml-2">Вариант 2 для сочетания</small>
+            </td>
+            <td width=100 class="text-center">
+              <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                data-target="#modal-choice-group-materials" title="изменить"><i
+                  class="fa fa-pencil mr-1"></i>изменить</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Объект(ы)</label>
+    <div class="col-lg-8 col-xl-6">
+      <div class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <tr>
+            <td>ГО, ОХНВП</td>
+            <td width=100 class="text-center">
+              <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                data-target="#modal-choice-objects" title="изменить"><i class="fa fa-pencil mr-1"></i>изменить</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Дополнительные
+      требования к СМ</label>
+    <div class="col-sm-6">
+      <textarea rows="2" class="form-control form-control-sm">данные из заявки</textarea>
+    </div>
+  </div>
+  <hr>
+  <h6 class="text-primary text-center mb-3">Документы, полученные в процессе аттестации</h6>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Акт по результатам
+      НК</label>
+    <div class="col-sm-6 col-xl-4">
+      <div class="bg-light border rounded py-1 pl-2">
+        <a href="#" class="text-sm" target="_blank">loaded_document.pdf</a>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <a href="#" class="btn btn-outline-secondary btn-xs" title="удалить"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <div class="col-sm-5 col-xl-4 offset-xl-1">
+      <input placeholder="Название документа(ов)" type="text" class="form-control form-control-sm">
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <input type="file" class="form-control form-control-sm">
+    </div>
+    <div class="col-sm-1">
+      <a href="#" title="удалить" class="btn btn-outline-secondary btn-xs"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-sm-3 offset-sm-5">
+      <button type="button" class="btn btn-xs btn-outline-primary"><i class="fa fa-plus mr-1"></i>Добавить
+        документ</button>
+    </div>
+  </div>
+  <hr>
+
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+    <a href="{% url 'sasv:cases' %}" class="btn btn-primary btn-sm"><i class="fa fa-download mr-1"></i>Скачать
+      протокол</a>
+  </div>
+</form>

@@ -1,0 +1,54 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Результаты аттестационных испытаний СМ</h6>
+  <p class="text-info text-bold text-sm mb-1">Проверка характеристик СМ</p>
+  @include('table_tests_characteristics.html')
+  <p class="text-info text-bold text-sm mb-1">Данные о КСС</p>
+  @include('table_tests_kss_info.html')
+  <p class="text-info text-bold text-sm mb-1">Контроль КСС</p>
+  @include('table_tests_controls_info.html')
+  <p class="text-info text-bold text-sm mb-1">Результаты неразрушающего контроля КСС<small
+      class="text-warning ml-2">(При аттестации Гз проводят только неразрушающий контроль КСС)</small></p>
+      @include('table_tests_nk_control_info.html')
+  <p class="text-info text-bold text-sm mb-1">Результаты разрушающих испытаний и исследований КСС<small
+      class="text-warning ml-2">(При аттестации Эп, Пс, Пп и Ф для определения свойств наплавленного металла (металла шва) проводят
+      след. испытания и исследования КСС)</small></p>
+  <p class="text-info text-sm mb-1">а) химический состав наплавленного металла</p>
+  @include('table_tests_chemical_composition_info.html')
+  <div class="text-warning text-sm ml-2">При <b>периодичекой аттестации</b> СМ определяют <b>только химический
+      состав</b> наплавленного металла (металла шва)</div>
+  <p class="text-info text-sm mb-1">б) механические свойства наплавленного металла</p>
+  @include('table_tests_mechanical_properties_metal.html')
+  <p class="text-info text-sm mb-1">в) механические свойства металла шва</p>
+  @include('table_tests_mechanical_properties_seam.html')
+  <p class="text-info text-sm mb-1">г) содержание ферритной фазы в наплавленном металле (металле шва)<small
+      class="text-warning ml-2">(если испытания/исследования не проводились, то таблица
+      отсутствует)</small></p>
+      @include('table_tests_ferrite_phase.html')
+  <p class="text-info text-sm mb-1">д) стойкость к межкристаллитной коррозии наплавленного металла (металла шва)<small
+      class="text-warning ml-2">(если испытания/исследования не проводились, то таблица
+      отсутствует)</small></p>
+      @include('table_tests_corrosion_resistance.html')
+  <p class="text-info text-sm mb-1">е) содержание диффузионного водорода в наплавленном металле<small
+      class="text-warning ml-2">(если испытания/исследования не проводились, то таблица
+      отсутствует)</small></p>
+      @include('table_tests_hydrogen_content.html')
+  <p class="text-info text-sm mb-1">Название испытания/исследования</p>
+  @include('table_tests_other_properties.html')
+  <hr>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Результаты
+      аттестационных испытаний<small class="text-warning ml-2">(если неудовлетворительно, то СО/СМ
+        считают неаттестованным и область аттестации не устанавливают!!!)</small></label>
+    <div class="col-sm-6 col-xl-4">
+      <select class="form-control form-control-sm">
+        <option value="opt1">-</option>
+        <option value="opt2">удовлетворительно</option>
+        <option value="opt3">неудовлетворительно</option>
+      </select>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+  </div>
+</form>

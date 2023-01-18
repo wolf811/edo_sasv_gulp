@@ -1,10 +1,10 @@
 <form class="editing-form shadow-sm pt-3">
-  <h6 class="text-primary text-center mb-3">Формирование программы
+  <h6 class="text-primary text-center mb-3">Формирование протокола
     аттестации</h6>
-  <!-- <h6 v-if="direction == 'st'" class="text-primary text-center mb-3">Формирование программы проверки готовности
-    организации</h6> -->
+  <!-- <h6 v-if="direction == 'st'" class="text-primary text-center mb-3">Формирование протокола аттестационных испытаний
+    технологии сварки (наплави, пайки)</h6> -->
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ программы, дата</label>
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ протокола, дата</label>
     <div class="col-sm-2">
       <input type="text" class="form-control form-control-sm">
     </div>
@@ -14,31 +14,44 @@
   </div>
   <!-- <div v-if="direction == 'so'">
     <div class="form-group row">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ программы, дата <em
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ протокола, дата <em
           class="text-secondary">(наименование, марка СО1)</em></label>
       <div class="col-sm-2">
         <input type="text" class="form-control form-control-sm">
       </div>
       <div class="col-sm-2">
-        <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+        <div id="program_date_picker" class="input-group form-date" data-picker="datepicker">
+          <input type="text" class="form-control form-control-sm js-datetimepicker" placeholder="дд.мм.гггг">
+          <div class="input-group-append">
+            <div id="program_date_picker_trigger" class="btn btn-outline-secondary btn-sm add-on"><i
+                class="fa fa-calendar"></i></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="form-group row">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ программы, дата <em
-          class="text-secondary">(наименование, марка СО2)</em></label>
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ протокола, дата <em
+          class="text-secondary">(наименование, марка СО1)</em></label>
       <div class="col-sm-2">
         <input type="text" class="form-control form-control-sm">
       </div>
       <div class="col-sm-2">
-        <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+        <div id="program_date_picker" class="input-group form-date" data-picker="datepicker">
+          <input type="text" class="form-control form-control-sm js-datetimepicker" placeholder="дд.мм.гггг">
+          <div class="input-group-append">
+            <div id="program_date_picker_trigger" class="btn btn-outline-secondary btn-sm add-on"><i
+                class="fa fa-calendar"></i></div>
+          </div>
+        </div>
       </div>
     </div>
   </div> -->
   <hr>
-  <!-- <h6 class="text-primary text-center mb-3">Сведения из заявки</h6> -->
-  <a href="#collapse_info_from_application" class="h6 text-primary d-block text-center mb-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse_info_from_application">Сведения из заявки<i class="fa fa-angle-down ml-2"></i></a>
+  <a href="#collapse_info_from_application" class="h6 text-primary d-block text-center mb-3" data-toggle="collapse"
+    role="button" aria-expanded="false" aria-controls="collapse_info_from_application">Сведения из заявки<i
+      class="fa fa-angle-down ml-2"></i></a>
   <div class="collapse" id="collapse_info_from_application">
-    @include('info_from_application.html')
+  @include('info_from_application.html')
   </div>
   <hr>
   <div class="form-group row">
@@ -52,7 +65,7 @@
             </td>
             <td width=100 class="text-center">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="choice_boss" value="">
+                <input class="form-check-input" type="radio" name="choice_boss" value="" disabled>
                 <label class="form-check-label" for="">Председатель</label>
               </div>
             </td>
@@ -62,7 +75,7 @@
             </td>
             <td width=100 class="text-center">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="choice_boss" value="">
+                <input class="form-check-input" type="radio" name="choice_boss" value="" checked readonly>
                 <label class="form-check-label" for="">Председатель</label>
               </div>
             </td>
@@ -72,15 +85,9 @@
             </td>
             <td width=100 class="text-center">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="choice_boss" value="">
+                <input class="form-check-input" type="radio" name="choice_boss" value="" disabled>
                 <label class="form-check-label" for="">Председатель</label>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td colspan=2>
-              <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
-                data-target="#modal-comission-choice " title="выбрать состав комиссии">выбрать</button>
             </td>
           </tr>
         </table>

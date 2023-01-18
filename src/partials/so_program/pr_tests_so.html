@@ -1,0 +1,82 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Аттестационные испытания</h6>
+  <ul class="nav nav-tabs" id="soTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="name-so1-tab" data-toggle="tab" href="#name-so1" role="tab"
+        aria-controls="name-so1" aria-selected="true">Наименование, марка 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="name-so2-tab" data-toggle="tab" href="#name-so2" role="tab" aria-controls="name-so2"
+        aria-selected="false">Наименование, марка 2</a>
+    </li>
+  </ul>
+  <div class="tab-content border border-top-0 p-3 bg-white" id="soTabContent">
+    <div class="tab-pane fade show active" id="name-so1" role="tabpanel" aria-labelledby="name-so1-tab">
+      <p class="text-info text-sm mb-1">Проверка соблюдения требований безопасности</p>
+      @include('pr_tests_so_safety_requirements.html')
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Укажите
+          режимы работы, соответствующие заявленным способам сварки (наплавки)<span class="text-danger">*</span></label>
+        <!-- <div class="col-sm-3">
+          <input required="required" type="text" class="form-control form-control-sm">
+        </div> -->
+        <div class="col-sm-6">
+          <div class="form-check form-check-sm form-check-inline">
+            <input type="checkbox" value="option1" class="form-check-input">
+            <label for="" class="form-check-label">РАД</label>
+          </div>
+          <div class="form-check form-check-sm form-check-inline">
+            <input type="checkbox" value="option1" class="form-check-input">
+            <label for="" class="form-check-label">МАДП (наплавка)</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Комментарии</label>
+        <div class="col-sm-6">
+          <input required="required" type="text" class="form-control form-control-sm">
+        </div>
+      </div>
+      <p class="text-info text-sm mb-1">Проверка технических характеристик (параметров) СО</p>
+      @include('pr_tests_so_technical_parameters.html')
+      <p class="text-info text-sm mb-1">Сварка и контроль КСС</p>
+      @include('pr_tests_so_control_kss.html')
+      <button class="btn btn-outline-primary btn-sm text-center"><i class="fa fa-plus mr-1"></i>Добавить
+        режим(ы)</button>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <div>
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-primary btn-sm disabled" type="button"><i
+              class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+        </div>
+        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-2"></i>Скачать программу</a>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="name-so2" role="tabpanel" aria-labelledby="name-so2-tab">
+      <p class="text-info text-sm mb-1">Проверка соблюдения требований безопасности</p>
+      {% include 'sasv/includes/program/pr_tests_so_safety_requirements.html' %}
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Укажите
+          режим(ы) работы<span class="text-danger">*</span></label>
+        <div class="col-sm-3">
+          <input required="required" type="text" class="form-control form-control-sm">
+        </div>
+      </div>
+      <p class="text-info text-sm mb-1">Проверка технических характеристик (параметров) СО</p>
+      {% include 'sasv/includes/program/pr_tests_so_technical_parameters.html' %}
+      <p class="text-info text-sm mb-1">Сварка и контроль КСС</p>
+      {% include 'sasv/includes/program/pr_tests_so_control_kss.html' %}
+      <button class="btn btn-outline-primary btn-sm"><i class="fa fa-plus mr-1"></i>Добавить режим(ы)</button>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <div>
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-primary btn-sm disabled" type="button"><i
+              class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+        </div>
+        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-2"></i>Скачать программу</a>
+      </div>
+    </div>
+  </div>
+</form>

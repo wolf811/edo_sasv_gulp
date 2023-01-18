@@ -1,0 +1,141 @@
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <!-- <th>Вид атт.</th> -->
+      <th>Объект</th>
+      <th>Методы неразрушающего контроля, виды разрушающих испытаний и исследований</th>
+      <th>Документы, регламентирующие методику неразрушающего контроля, разрушающих испытаний и исследований</th>
+      <th>Документы, регламентирующие нормы оценки качества КСС</th>
+      <th>Действия</th>
+    </tr>
+    <tr>
+      <td rowspan="5">ГО, ОХНВП</td>
+      <td>ВИК</td>
+      <td>Документы под ВИК</td>
+      <td rowspan="5">Документы под объекты</td>
+      <td rowspan="5">
+        <div class="btn-group btn-group-xs">
+          <div type="button" class="btn btn-outline-secondary" title="копировать"><i class="fa fa-clone"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" data-toggle="collapse"
+            data-target="#controls_info_kss_sm" aria-expanded="false" aria-controls="controls_info_kss_sm"
+            title="заполнить">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>РК</td>
+      <td>Документы под РК</td>
+    </tr>
+    <tr>
+      <td>УК</td>
+      <td>Документы под УК</td>
+    </tr>
+    <tr>
+      <td>испытание</td>
+      <td>Документы под испытание</td>
+    </tr>
+    <tr>
+      <td>исследование</td>
+      <td>Документы под исследование</td>
+    </tr>
+    <tr class="bg-light">
+      <td class="text-left" colspan="7">
+        <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="collapse"
+          data-target="#controls_info_kss_sm" aria-expanded="false" aria-controls="controls_info_kss_sm"><i
+            class="fa fa-plus mr-1"></i>Добавить данные</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="mb-3 collapse" id="controls_info_kss_sm">
+  <div class="bg-white py-3 border">
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Объект<small
+          class="text-warning ml-2">Заявка!!! Можно комбинировать для таблицы</small></label>
+      <div class="col-sm-6">
+        <div class="form-check form-check-sm form-check-inline">
+          <input type="checkbox" value="option1" class="form-check-input" checked>
+          <label for="" class="form-check-label">ГО</label>
+        </div>
+        <div class="form-check form-check-sm form-check-inline">
+          <input type="checkbox" value="option1" class="form-check-input" checked>
+          <label for="" class="form-check-label">ОХНВП</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">
+        <p class="mb-1">Методы неразрушающего контроля</p>
+        <p class="mb-0">Документы, регламентирующие методику НК</p>
+      </label>
+      <div class="col-sm-6">
+        <small class="text-warning">True</small>
+        <div class="table-responsive">
+          <table class="table table-bordered bg-white">
+            <tbody>
+              <tr>
+                <td>ВИК</td>
+                <td class="text-center">документ, регламентирующий методику НК</td>
+              </tr>
+              <tr>
+                <td>РК</td>
+                <td class="text-center">документ, регламентирующий методику НК</td>
+              </tr>
+              <tr>
+                <td>УК</td>
+                <td class="text-center">документ, регламентирующий методику НК</td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <button data-target="#modal-choice-control-methods" data-toggle="modal" title="изменить" type="button"
+                    class="btn btn-outline-secondary btn-xs"><i class="fa fa-pencil mr-1"></i>изменить</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">
+        <p class="mb-1">Виды разрушающих испытаний и исследований</p>
+        <p class="mb-0">Документы, регламентирующие методику разрушающих испытаний и исследований</p>
+
+      </label>
+      <div class="col-sm-6">
+        <small class="text-warning">False</small>
+        <div class="table-responsive">
+          <table class="table table-bordered bg-white">
+            <tbody>
+              <tr>
+                <td colspan="3">
+                  <button data-target="#modal-choice-control-methods" data-toggle="modal"
+                    title="выбрать методы НК, документы" type="button"
+                    class="btn btn-xs btn-outline-primary">выбрать</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документы,
+        регламентирующий нормы оценки качества КСС</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <hr>
+    <div class="ml-3">
+      <button type="button" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+      <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#controls_info_kss_sm"
+        aria-expanded="false" aria-controls="controls_info_kss_sm">Отмена</a>
+    </div>
+  </div>
+</div>

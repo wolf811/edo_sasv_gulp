@@ -1,0 +1,58 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Проверка технических возможностей производителя СМ</h6>
+  <p class="text-sm text-warning">Блок актуален только для <b>производителя и представителя производителя СМ</b></p>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">АЦ, выполнивший проверку; сроки
+      проверки<small class="text-warning ml-2">(информация может быть перенесена из блока 'Сведениях о заявителе' в
+        разделе 'Заявочные докуметы'.)</small></label>
+    <div class="col-sm-2">
+      <select class="form-control form-control-sm">
+        <option value="opt1">-</option>
+        <option selected value="opt2">АЦСМ-22, Москва</option>
+        <option value="opt3">АЦСМ-23, Санкт-Петербург</option>
+      </select>
+    </div>
+    <div class="col-sm-2">
+      <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+    </div>
+    <div class="col-sm-2">
+      <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Результаты
+      проверки<small class="text-warning ml-2">(если неудовлетворительно, то аттестацию не проводят!!!)</small></label>
+    <div class="col-sm-6 col-xl-4">
+      <select class="form-control form-control-sm">
+        <option value="opt1">-</option>
+        <option value="opt2">удовлетворительно</option>
+        <option value="opt3">неудовлетворительно</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Отчет о проверке<small
+        class="text-muted ml-2">(если оформлялся)</small></label>
+    <div class="col-sm-6 col-xl-4">
+      <input type="file" class="form-control form-control-sm">
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Отчет о проверке<small
+        class="text-muted ml-2">(если оформлялся)</small><small class="text-warning ml-2">(Загруженный
+        документ)</small></label>
+    <div class="col-sm-6 col-xl-4">
+      <div class="bg-light border rounded py-1 pl-2">
+        <a href="#" class="text-sm" target="_blank">loaded_document.pdf</a>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <a href="#" class="btn btn-outline-secondary btn-xs" title="удалить"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <hr>
+
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+  </div>
+</form>

@@ -1,0 +1,95 @@
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <th>№ технологической карты сварки (наплавки) КСС</th>
+      <th>Способ сварки (наплавки)</th>
+      <th>Вид, размеры основного материала деталей КСС</th>
+      <th>Метод НК, вид разрушающих испытаний или исследований</th>
+      <th>НД, регламентирующий методику НК, разрушающих испытаний или исследований</th>
+      <th>НД, регламентирующий нормы оценки качества</th>
+      <th>Действия</th>
+    </tr>
+    <tr>
+      <td>тех.карта 1</td>
+      <td>РАД</td>
+      <td>Lorem ipsum dolor sit.</td>
+      <td>Lorem ipsum dolor sit.</td>
+      <td>Lorem ipsum dolor sit.</td>
+      <td>Lorem ipsum dolor sit.</td>
+      <td>
+        <div class="btn-group btn-group-xs">
+          <!-- <div type="button" class="btn btn-outline-secondary" title="копировать"><i
+              class="fa fa-clone"></i></div> -->
+          <div type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#control_kss_so"
+            aria-expanded="false" aria-controls="control_kss_so" title="заполнить"><i class="fa fa-pencil"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="bg-light">
+      <td colspan="7" class="text-left">
+        <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="collapse"
+          data-target="#control_kss_so" aria-expanded="false" aria-controls="control_kss_so"><i
+            class="fa fa-plus mr-1"></i>Добавить данные</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="mb-3 collapse" id="control_kss_so">
+  <div class="bg-white py-3 border">
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ технологической карты
+        сварки (наплавки) КСС</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать способ сварки
+        (наплавки)<small class="text-warning ml-2">Заявка!!!</small></label>
+      <div class="col-sm-3">
+        <select class="form-control form-control-sm">
+          <option value="opt0">-</option>
+          <option value="opt1">РАД</option>
+          <option value="opt2">МАДП (наплавка)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Вид, размеры основного
+        материала деталей КСС</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Метод НК, вид разрушающих
+        испытаний или исследований</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документ,
+        регламентирующий методику НК, разрушающих испытаний или исследований</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документ,
+        регламентирующий нормы оценки качества</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <hr>
+    <div class="ml-2">
+      <button type="button" class="btn btn-outline-primary btn-sm ml-2">Подтвердить</button>
+      <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#control_kss_so" aria-expanded="false"
+        aria-controls="control_kss_so">Отмена</a>
+    </div>
+  </div>
+</div>

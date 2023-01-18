@@ -1,0 +1,117 @@
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <!-- <th>Вид атт.</th> -->
+      <th>Обозначение КСС</th>
+      <th>Метод неразрушающего контроля</th>
+      <th>Оборудование и средства контроля</th>
+      <th>Документы, регламентирующие методику контроля</th>
+      <th>Документы, регламентирующие нормы оценки качества</th>
+      <th>Действия</th>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>
+        <div class="btn-group btn-group-xs">
+          <div type="button" class="btn btn-outline-secondary" title="копировать"><i class="fa fa-clone"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" data-toggle="collapse"
+            data-target="#nk_control_info_kss_sm" aria-expanded="false" aria-controls="nk_control_info_kss_sm"
+            title="заполнить">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="bg-light">
+      <td class="text-left" colspan="6">
+        <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="collapse"
+          data-target="#nk_control_info_kss_sm" aria-expanded="false" aria-controls="nk_control_info_kss_sm"><i
+            class="fa fa-plus mr-1"></i>Добавить данные</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="mb-3 collapse" id="nk_control_info_kss_sm">
+  <div class="bg-white py-3 border">
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<small
+          class="text-warning ml-2">см. 'Данные о КСС'!!!</small></label>
+      <div class="col-sm-3">
+        <select class="form-control form-control-sm">
+          <option value="opt0">-</option>
+          <option value="opt1">КСС 1</option>
+          <option value="opt2">КСС 2</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">
+        <p class="mb-1">Методы неразрушающего контроля</p>
+        <p class="mb-0">Документы, регламентирующие методику НК</p>
+      </label>
+      <div class="col-sm-6">
+        <div class="table-responsive">
+          <table class="table table-bordered bg-white">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="method_nk_for_kss" value="option1" class="form-check-input">
+                    <label for="" class="form-check-label text-bold">ВИК</label>
+                  </div>
+                </td>
+                <td class="text-center">документ, регламентирующий методику НК</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="method_nk_for_kss" value="option1" class="form-check-input">
+                    <label for="" class="form-check-label text-bold">РК</label>
+                  </div>
+                </td>
+                <td class="text-center">документ, регламентирующий методику НК</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check form-check-inline">
+                    <input type="radio" name="method_nk_for_kss" value="option1" class="form-check-input">
+                    <label for="" class="form-check-label text-bold">УК</label>
+                  </div>
+                </td>
+                <td class="text-center">документ, регламентирующий методику НК</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Оборудование и средства
+        контроля</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документы, регламентирующий
+        нормы оценки качества КСС</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <hr>
+    <div class="ml-3">
+      <button type="button" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+      <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#nk_control_info_kss_sm"
+        aria-expanded="false" aria-controls="nk_control_info_kss_sm">Отмена</a>
+    </div>
+  </div>
+</div>

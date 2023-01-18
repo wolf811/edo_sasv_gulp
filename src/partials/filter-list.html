@@ -3,8 +3,18 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md mb-2 mb-md-0">
-          <a href="sm_detail.html" class="btn btn-sm btn-primary mb-2 mb-sm-0 text-uppercase"><i class="fa fa-plus mr-2"></i>Новая
-            аттестация</a>
+          <!-- <a href="sm_detail.html" class="btn btn-sm btn-primary mb-2 mb-sm-0 text-uppercase"><i class="fa fa-plus mr-2"></i>Новая
+            аттестация</a> -->
+            <div class="dropdown">
+              <a class="btn btn-sm btn-primary mb-2 mb-sm-0 text-uppercase dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-plus mr-2"></i>Новая аттестация
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="sm_detail.html">Аттестация СМ</a>
+                <a class="dropdown-item" href="so_detail.html">Аттестация СО</a>
+                <a class="dropdown-item" href="st_detail.html">Аттестация СТ</a>
+              </div>
+            </div>
         </div>
         <div class="col-md col-lg-4 col-xl-3 float-sm-right">
           <form>

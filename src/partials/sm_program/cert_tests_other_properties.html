@@ -1,0 +1,84 @@
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <!-- <th>Вид атт.</th> -->
+      <th>Обозначение КСС</th>
+      <th>Название столбца</th>
+      <th>Название столбца</th>
+      <th>Название столбца</th>
+      <th>Название столбца</th>
+      <th>Действия</th>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>
+        <div class="btn-group btn-group-xs">
+          <div type="button" class="btn btn-outline-secondary" title="копировать"><i class="fa fa-clone"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#other_properties"
+            aria-expanded="false" aria-controls="other_properties" title="заполнить">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="bg-light">
+      <td class="text-left" colspan="6">
+        <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="collapse"
+          data-target="#other_properties" aria-expanded="false" aria-controls="other_properties"><i
+            class="fa fa-plus mr-1"></i>Добавить данные</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="mb-3 collapse" id="other_properties">
+  <div class="bg-white py-3 border">
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<small
+          class="text-warning ml-2">см. 'Данные о КСС'!!!</small></label>
+      <div class="col-sm-3">
+        <select class="form-control form-control-sm">
+          <option value="opt0">-</option>
+          <option value="opt1">КСС 1</option>
+          <option value="opt2">КСС 2</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Название столбца</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Название столбца</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Название столбца</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Название столбца</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <hr>
+    <div class="ml-3">
+      <button type="button" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+      <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#other_properties"
+        aria-expanded="false" aria-controls="other_properties">Отмена</a>
+    </div>
+  </div>
+</div>

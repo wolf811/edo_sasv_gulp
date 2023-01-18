@@ -1,189 +1,3 @@
-// // базовые подключения
-// @import "vars";
-// @import "mixins";
-// @import "fonts";
-// @import "settings";
-
-// // подключения компонентов страницы
-// @import "./components/media";
-// @import "./components/menu";
-// @import "./components/header";
-// @import "./components/main";
-// @import "./components/modal";
-// @import "./components/footer";
-// @import "./components/card-object";
-// @import "./components/navbar-object";
-// @import "./components/fancybox";
-// @import "./components/compact-view";
-
-// // ======== Variables =============
-// // $primary: #006093 !important;
-// // $primary-hover: #1C516E !important;
-// // $warning: #E8A900 !important;
-// // $danger: #E83400 !important;
-// // $danger-hover: #F3663D !important;
-// // $orange: #fd9843;
-// // ======== end Variables ==========
-
-
-// html,
-// body {
-//   height: 100%;
-// }
-
-// body {
-//   // font-family: 'Montserrat', sans-serif;
-//   font-family: 'OpenSans', sans-serif;
-//   background-image: url(../img/bg-content.png);
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-
-// .fw-light {
-//   font-family: 'OpenSans', sans-serif;
-//   font-weight: 300;
-// }
-// .fw-normal {
-//   font-family: 'OpenSans', sans-serif;
-//   font-weight: 400;
-// }
-// .fw-semibold {
-//   font-family: 'OpenSans', sans-serif;
-//   font-weight: 600;
-// }
-// .fw-semibold {
-//   font-family: 'OpenSans', sans-serif;
-//   font-weight: 700;
-// }
-// .wrapper {
-//   display: flex !important;
-//   flex-direction: column !important;
-//   height: 100% !important;
-
-//   header {
-//     flex: 0 0 auto;
-//   }
-
-//   main {
-//     flex: 1 0 auto;
-//   }
-
-//   footer {
-//     flex: 0 0 auto;
-//   }
-
-// }
-
-// .container-main {
-//   @media (min-width: 1921px) {
-//     max-width: 1920px;
-//   }
-// }
-// a,
-// a.btn-link {
-//   color: #0462B1;
-//   text-decoration: none;
-
-//   &:hover {
-//     opacity: 0.8;
-//   }
-// }
-
-// a.btn-primary {
-//   color: #fff;
-// }
-// .pagination {
-//   --bs-pagination-active-bg: #0462B1;
-// }
-// .btn-primary {
-//   --bs-btn-bg: #0462B1;
-//   --bs-btn-border-color: #0462B1;
-//   --bs-btn-hover-bg: #0462B1;
-//   --bs-btn-disabled-bg: #0462B1;
-//   --bs-btn-disabled-border-color: #0462B1;
-// }
-
-// .btn-outline-primary {
-//   --bs-btn-color: #0462B1;
-//   --bs-btn-border-color: #0462B1;
-//   --bs-btn-hover-bg: #0462B1;
-//   --bs-btn-hover-border-color: #0462B1;
-//   --bs-btn-active-bg: #0462B1;
-//   --bs-btn-active-border-color: #0462B1;
-//   --bs-btn-disabled-color: #0462B1;
-// }
-
-// .btn-orange {
-//   --bs-btn-color: #212529 !important;
-//   --bs-btn-bg: #fd9843;
-//   --bs-btn-border-color: #fd9843;
-//   --bs-btn-hover-color: #212529;
-//   --bs-btn-hover-bg: #fd7e14;
-//   --bs-btn-hover-border-color: #fd7e14;
-//   --bs-btn-focus-shadow-rgb: 49, 132, 253;
-//   --bs-btn-active-color: #212529;
-//   --bs-btn-active-bg: #fd7e14;
-//   --bs-btn-active-border-color: #fd7e14;
-//   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-//   --bs-btn-disabled-color: #212529;
-//   --bs-btn-disabled-bg: #fd9843;
-//   --bs-btn-disabled-border-color: #fd9843;
-// }
-
-// .btn-xs {
-//   padding: 0.125rem 0.35rem;
-//   font-size: 0.8rem;
-//   border-radius: 0.2rem;
-// }
-// .bg-orange {
-//   background-color: #fd9843;
-// }
-
-// .text-orange {
-//   color: #fd9843;
-// }
-
-// .border-orange {
-//   border-color: #fd9843;
-
-// }
-
-// .text-primary {
-//   color: #0462B1 !important;
-// }
-
-// .form-check-label.text-primary {
-//   &:hover {
-//     opacity: 0.8;
-//   }
-// }
-
-// .form-switch .form-check-input:checked {
-//   background-color: #0462B1 !important;
-// }
-
-// .nav-pills {
-//   --bs-nav-pills-border-radius: 0.375rem;
-//   --bs-nav-pills-link-active-color: #fff;
-//   --bs-nav-pills-link-active-bg: #0462B1;
-// }
-
-// .input-group.disabled {
-//   .btn {
-//     display: none;
-//     // color: var(--bs-btn-disabled-color);
-//     // pointer-events: none;
-//     // background-color: var(--bs-btn-disabled-bg);
-//     // border-color: var(--bs-btn-disabled-border-color);
-//     // opacity: var(--bs-btn-disabled-opacity);
-//   }
-//   .form-control, .form-select {
-//     background-color: #e9ecef;
-//     opacity: 1;
-//     pointer-events: none;
-//   }
-// }
-
 // Variables
 $primary: #134e8d !important;
 $primary-light: #337ab7 !important;
@@ -195,39 +9,39 @@ $text-sm: 0.875rem;
 // ==================================
 
 // ========= HEADER styles ============
-@import "./components/header";
+@import "components/header";
 // END HEADER styles
 
 // ========= NAME-PAGE styles ============
-@import "./components/name-page";
+@import "components/name-page";
 // END NAME-PAGE styles
 
 // ========= TOP-MENU styles ============
-@import "./components/top-menu";
+@import "components/top-menu";
 // END TOP-MENU styles
 
 // ========= filter-block styles ============
-@import "./components/filter-block";
+@import "components/filter-block";
 // END filter-block styles
 
 //========= FOOTER styles ============
-@import "./components/footer";
+@import "components/footer";
 // END FOOTER styles
 
 // ========== Modal styles =========
-@import "./components/modal";
+@import "components/modal";
 // ========== END Modal styles =========
 
 // ========== Document-print styles =========
-@import "./components/document-print";
+// @import "document-print";
 // ========== END Document-print styles =========
 
-@import "./components/tables";
-@import "./components/accordion-left";
-@import "./components/centers-list";
-@import "./components/profile-area-certification";
-@import "./components/media-utilities";
-@import "./components/sasv-styles";
+@import "components/tables";
+@import "components/accordion-left";
+@import "components/centers-list";
+@import "components/profile-area-certification";
+@import "components/media-utilities";
+@import "components/sasv-styles";
 
 // ========= CONTENT style ============
 html,
@@ -332,7 +146,7 @@ html {
     }
 
     // === Card-left-title styles ===
-    @import "./components/card-left-title";
+    @import "components/card-left-title";
     // END Card-left-title styles
 
     .list-group {
@@ -768,10 +582,6 @@ margin: auto;*/
     }
   }
 }
-
-// ========== certificate-container for print styles =========
-@import "./components/certificate-container";
-// @import "certificate-lnk-container";
 
 .downloaded-doc {
   // background-color: #ddd;

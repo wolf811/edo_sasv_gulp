@@ -1,0 +1,153 @@
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <!-- <th>Вид атт.</th> -->
+      <th>Обозначение КСС</th>
+      <th>№ технологической карты сварки (наплавки) КСС</th>
+      <th>Способ сварки (наплавки)</th>
+      <th>Группы/подгруппы основного материала</th>
+      <th>Параметры и количество КСС</th>
+      <th>Проверяемые свойства наплавленного металла (металла шва)</th>
+      <th>Действия</th>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>
+        <div class="btn-group btn-group-xs">
+          <div type="button" class="btn btn-outline-secondary" title="копировать"><i class="fa fa-clone"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#kss_info_sm"
+            aria-expanded="false" aria-controls="kss_info_sm" title="заполнить">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div type="button" class="btn btn-outline-secondary" title="удалить"><i class="fa fa-times"></i>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="bg-light">
+      <td class="text-left" colspan="7">
+        <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="collapse" data-target="#kss_info_sm"
+          aria-expanded="false" aria-controls="kss_info_sm"><i class="fa fa-plus mr-1"></i>Добавить данные</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="mb-3 collapse" id="kss_info_sm">
+  <div class="bg-white py-3 border">
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Тип КСС</label>
+      <div class="col-sm-6">
+        <div class="form-check form-check-inline form-check-sm">
+          <input name="type_kss" type="radio" value="option1" class="form-check-input">
+          <label for="" class="form-check-label">тип А - наплавка</label>
+        </div>
+        <div class="form-check form-check-inline form-check-sm">
+          <input name="type_kss" type="radio" value="option2" class="form-check-input" checked="checked">
+          <label for="" class="form-check-label">тип Б - сварное соединение</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<i
+          class="fa fa-info-circle text-secondary ml-1"
+          data-content="Обозначение КСС состоит из пяти частей: 1 - содержит обозначение типа КСС (А/Б); 2 - обозначение способа сварки (наплавки); 3 - обозначение групп/подгрупп свариваемых материалов; 4 - порядковый № партии, присвоенный в акте отбора; 5 - для Пп, Пс, Эп - типоразмер, для Гз - марку или состав газа или газовой смеси"
+          data-placement="top" data-toggle="popover" data-trigger="hover"></i></label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control form-control-sm" value="Б-" required>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ технологической карты
+        сварки (наплавки) КСС</label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control form-control-sm" required>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать способ сварки
+        (наплавки)<small class="text-warning ml-2">Заявка!!!</small></label>
+      <div class="col-sm-3">
+        <select class="form-control form-control-sm">
+          <option value="opt0">-</option>
+          <option value="opt1">РАД</option>
+          <option value="opt2">МАДП (наплавка)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать
+        группы/подгруппы
+        основного материала<small class="text-warning ml-2">Заявка!!!</small></label>
+      <div class="col-sm-6">
+        <div class="d-flex align-items-center">
+          <select class="form-control form-control-sm">
+            <option value="opt0">-</option>
+            <option value="opt1">1.1</option>
+            <option value="opt2">1.2</option>
+            <option value="opt3">1.3</option>
+            <option value="opt4">51.1</option>
+            <option value="opt5">51.2</option>
+          </select>
+          <i class="fa fa-plus text-sm mx-3"></i>
+          <select class="form-control form-control-sm">
+            <option value="opt0">-</option>
+            <option value="opt1">1.1</option>
+            <option value="opt2">1.2</option>
+            <option value="opt3">1.3</option>
+            <option value="opt4">51.1</option>
+            <option value="opt5">51.2</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Параметры и количество
+        КСС</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Проверяемые свойства
+        наплавленного металла (металла шва)</label>
+      <div class="col-sm-6">
+        <div class="table-responsive">
+          <table class="table table-bordered bg-white">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <button data-target="#modal-metal-properties" data-toggle="modal" title="выбрать проверяемые свойства"
+                    type="button" class="btn btn-xs btn-outline-primary">выбрать</button>
+                </td>
+              </tr>
+              <tr>
+                <td>ВИК, ЭК, испытания</td>
+                <td width="100" class="text-center">
+                  <div aria-label="Basic example" role="group" class="btn-group btn-group-xs">
+                    <button data-target="#modal-metal-properties" data-toggle="modal" title="изменить" type="button"
+                      class="btn btn-outline-secondary"><i class="fa fa-pencil"></i></button>
+                    <button title="удалить" type="button" class="btn btn-outline-secondary"><i
+                        class="fa fa-times"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="ml-3">
+      <button type="button" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+      <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#kss_info_sm" aria-expanded="false"
+        aria-controls="kss_info_sm">Отмена</a>
+    </div>
+  </div>
+</div>
