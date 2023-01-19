@@ -1,0 +1,150 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Установленная область аттестации</h6>
+  <p class="text-sm text-warning">При изменении области аттестации, в модальных окнах, оставлять активными только
+    отмеченные элементы (заявленные)</p>
+  <ul class="nav nav-tabs" id="soAreaTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="name-so1-area-tab" data-toggle="tab" href="#name-so1-area" role="tab"
+        aria-controls="name-so1-area" aria-selected="true">Наименование, марка 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="name-so2-area-tab" data-toggle="tab" href="#name-so2-area" role="tab"
+        aria-controls="name-so2-area" aria-selected="false">Наименование, марка 2</a>
+    </li>
+  </ul>
+  <div class="tab-content p-3 bg-white border border-top-0" id="soAreaTabContent">
+    <div class="tab-pane fade show active" id="name-so1-area" role="tabpanel" aria-labelledby="name-so1-area-tab">
+      <div class="form-group row">
+        <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Способы сварки
+          (наплавки)</label>
+        <div class="col-lg-8 col-xl-6">
+          <div class="table-responsive">
+            <table class="table table-bordered bg-white">
+              <tr>
+                <td>РАД, МАДП (наплавка)</td>
+                <td width=100 class="text-center">
+                  <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                    data-target="#modal-choice-welding-method" title="изменить"><i
+                      class="fa fa-pencil mr-1"></i>изменить</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Объект(ы)</label>
+        <div class="col-lg-8 col-xl-6">
+          <div class="table-responsive">
+            <table class="table table-bordered bg-white">
+              <tr>
+                <td>ГО, ОХНВП</td>
+                <td width=100 class="text-center">
+                  <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                    data-target="#modal-choice-objects" title="изменить"><i
+                      class="fa fa-pencil mr-1"></i>изменить</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Дополнительные
+          требования к СО</label>
+        <div class="col-sm-6">
+          <textarea rows="2" class="form-control form-control-sm">данные из заявки</textarea>
+        </div>
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+    </div>
+    <div class="tab-pane fade" id="name-so2-area" role="tabpanel" aria-labelledby="name-so2-area-tab">
+      <div class="form-group row">
+        <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Способы сварки
+          (наплавки)</label>
+        <div class="col-lg-8 col-xl-6">
+          <div class="table-responsive">
+            <table class="table table-bordered bg-white">
+              <tr>
+                <td>РАД, МАДП (наплавка)</td>
+                <td width=100 class="text-center">
+                  <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                    data-target="#modal-choice-welding-method" title="изменить"><i
+                      class="fa fa-pencil mr-1"></i>изменить</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Объект(ы)</label>
+        <div class="col-lg-8 col-xl-6">
+          <div class="table-responsive">
+            <table class="table table-bordered bg-white">
+              <tr>
+                <td>ГО, ОХНВП</td>
+                <td width=100 class="text-center">
+                  <button type="button" class="btn btn-outline-secondary btn-xs" data-toggle="modal"
+                    data-target="#modal-choice-objects" title="изменить"><i
+                      class="fa fa-pencil mr-1"></i>изменить</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Дополнительные
+          требования к СО</label>
+        <div class="col-sm-6">
+          <textarea rows="2" class="form-control form-control-sm">данные из заявки</textarea>
+        </div>
+      </div>
+      <hr>
+      <button type="submit" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+    </div>
+
+  </div>
+
+  <h6 class="text-primary text-center my-3">Документы, полученные в процессе аттестации</h6>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Акт по результатам
+      НК</label>
+    <div class="col-sm-6 col-xl-4">
+      <div class="bg-light border rounded py-1 pl-2">
+        <a href="#" class="text-sm" target="_blank">loaded_document.pdf</a>
+      </div>
+    </div>
+    <div class="col-sm-1">
+      <a href="#" class="btn btn-outline-secondary btn-xs" title="удалить"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <div class="col-sm-5 col-xl-4 offset-xl-1">
+      <input placeholder="Название документа(ов)" type="text" class="form-control form-control-sm">
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <input type="file" class="form-control form-control-sm">
+    </div>
+    <div class="col-sm-1">
+      <a href="#" title="удалить" class="btn btn-outline-secondary btn-xs"><i class="fa fa-times"></i></a>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-sm-3 offset-sm-5">
+      <button type="button" class="btn btn-xs btn-outline-primary"><i class="fa fa-plus mr-1"></i>Добавить
+        документ</button>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <div>
+      <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+      <a href="#" class="btn btn-primary btn-sm disabled" type="button"><i
+          class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-2"></i>Скачать протокол(ы)</a>
+  </div>
+</form>

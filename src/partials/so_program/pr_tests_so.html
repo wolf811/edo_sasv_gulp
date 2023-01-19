@@ -55,7 +55,7 @@
     </div>
     <div class="tab-pane fade" id="name-so2" role="tabpanel" aria-labelledby="name-so2-tab">
       <p class="text-info text-sm mb-1">Проверка соблюдения требований безопасности</p>
-      {% include 'sasv/includes/program/pr_tests_so_safety_requirements.html' %}
+      @include('pr_tests_so_safety_requirements.html')
       <div class="form-group row align-items-center">
         <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Укажите
           режим(ы) работы<span class="text-danger">*</span></label>
@@ -64,9 +64,9 @@
         </div>
       </div>
       <p class="text-info text-sm mb-1">Проверка технических характеристик (параметров) СО</p>
-      {% include 'sasv/includes/program/pr_tests_so_technical_parameters.html' %}
+      @include('pr_tests_so_technical_parameters.html')
       <p class="text-info text-sm mb-1">Сварка и контроль КСС</p>
-      {% include 'sasv/includes/program/pr_tests_so_control_kss.html' %}
+      @include('pr_tests_so_control_kss.html')
       <button class="btn btn-outline-primary btn-sm"><i class="fa fa-plus mr-1"></i>Добавить режим(ы)</button>
       <hr>
       <div class="d-flex justify-content-between">

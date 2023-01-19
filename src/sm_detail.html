@@ -68,7 +68,7 @@
                   </div>
                 </div>
                 <div class="col-lg-9 col-xl-8">
-                  <!-- <div class="d-none">{% include 'sasv/includes/alert-check-error.html' %}</div> -->
+                  @include('partials/alert-check-error.html')
                   <div class="tab-content" id="caseEditApplContent">
                     <div class="tab-pane fade show active" id="appl-one" role="tabpanel" aria-labelledby="appl-one-tab">
                       @include('partials/sm_application/first_step.html')</div>
@@ -155,7 +155,7 @@
                   </div>
                 </div>
                 <div class="col-lg-9 col-xl-8">
-                  <!-- <div class="d-none">{% include 'sasv/includes/alert-check-error.html' %}</div> -->
+                  @include('partials/alert-check-error.html')
                   <div class="tab-content" id="caseEditProgramContent">
                     <div class="tab-pane fade show active" id="pr-zero" role="tabpanel" aria-labelledby="pr-zero-tab">
                       @include('partials/sm_program/pr_zero_step.html')</div>

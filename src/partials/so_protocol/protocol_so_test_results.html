@@ -1,0 +1,91 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Результаты аттестационных испытаний СО</h6>
+  <ul class="nav nav-tabs" id="soTestTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="name-so1-test-tab" data-toggle="tab" href="#name-so1-test" role="tab"
+        aria-controls="name-so1-test" aria-selected="true">Наименование, марка 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="name-so2-test-tab" data-toggle="tab" href="#name-so2-test" role="tab"
+        aria-controls="name-so2-test" aria-selected="false">Наименование, марка 2</a>
+    </li>
+  </ul>
+  <div class="tab-content border border-top-0 p-3 bg-white" id="soTestTabContent">
+    <div class="tab-pane fade show active" id="name-so1-test" role="tabpanel" aria-labelledby="name-so1-test-tab">
+      <p class="text-info text-sm mb-1">Проверка соблюдения требований безопасности</p>
+      @include('prot_tests_so_safety_requirements.html')
+      <div class="border p-2 shadow-sm mb-2">
+        <p class="text-bold text-sm mb-1"><span class="text-secondary mr-2">Режим работы, соответствующий способу(ам)
+            сварки (наплавки):</span>РАД</p>
+        <em class="text-sm">Комментарий к режиму (при наличии)</em>
+      </div>
+      <p class="text-info text-sm mb-1">Проверка технических характеристик (параметров) СО</p>
+      @include('prot_tests_so_technical_parameters.html')
+      <p class="text-info text-sm mb-1">Результаты сварки и контроля КСС</p>
+      @include('prot_tests_so_control_kss.html')
+      <div class="border p-2 shadow-sm mb-2">
+        <p class="text-bold text-sm mb-1"><span class="text-secondary mr-2">Режим работы, соответствующий способу(ам)
+            сварки (наплавки):</span>МАДП (наплавка)</p>
+        <em class="text-sm">Комментарий к режиму (при наличии)</em>
+      </div>
+      <p class="text-info text-sm mb-1">Проверка технических характеристик (параметров) СО</p>
+      @include('prot_tests_so_technical_parameters.html')
+      <p class="text-info text-sm mb-1">Результаты сварки и контроля КСС</p>
+      @include('prot_tests_so_control_kss.html')
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Результаты
+          аттестационных испытаний<small class="text-warning ml-2">(если неудовлетворительно, то СО/СМ
+            считают неаттестованным и область аттестации не устанавливают!!!)</small></label>
+        <div class="col-sm-6 col-xl-4">
+          <select class="form-control form-control-sm">
+            <option value="opt1">-</option>
+            <option value="opt2">удовлетворительно</option>
+            <option value="opt3">неудовлетворительно</option>
+          </select>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <div>
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-primary btn-sm disabled" type="button"><i
+              class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="name-so2-test" role="tabpanel" aria-labelledby="name-so2-test-tab">
+      <p class="text-info text-sm mb-1">Проверка соблюдения требований безопасности</p>
+      @include('prot_tests_so_safety_requirements.html')
+      <div class="border p-2 shadow-sm mb-2">
+        <p class="text-bold text-sm mb-1"><span class="text-secondary mr-2">Режим работы, соответствующий способу(ам)
+            сварки (наплавки):</span>РАД, МАДП (наплавка)</p>
+        <em class="text-sm">Комментарий к режиму (при наличии)</em>
+      </div>
+      <p class="text-info text-sm mb-1">Проверка технических характеристик (параметров) СО</p>
+      @include('prot_tests_so_technical_parameters.html')
+      <p class="text-info text-sm mb-1">Результаты сварки и контроля КСС</p>
+      @include('prot_tests_so_control_kss.html')
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Результаты
+          аттестационных испытаний<small class="text-warning ml-2">(если неудовлетворительно, то СО/СМ
+            считают неаттестованным и область аттестации не устанавливают!!!)</small></label>
+        <div class="col-sm-6 col-xl-4">
+          <select class="form-control form-control-sm">
+            <option value="opt1">-</option>
+            <option value="opt2">удовлетворительно</option>
+            <option value="opt3">неудовлетворительно</option>
+          </select>
+        </div>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <div>
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-primary btn-sm disabled" type="button"><i
+              class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+        </div>
+        <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-2"></i>Скачать протокол</a> -->
+      </div>
+    </div>
+  </div>
+</form>

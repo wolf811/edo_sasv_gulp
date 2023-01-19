@@ -1,0 +1,77 @@
+<p class="text-info text-sm mb-1">Сведения о заявителе аттестации<small class="text-warning ml-2">(для
+    протокола)</small></p>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover table-sm">
+    <tr>
+      <td class="table-active w-50">Наименование организации</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr>
+      <td class="table-active">Адрес места нахождения организации</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr>
+      <td class="table-active">ИНН (или иной идентификационный признак)</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr v-if="direction == 'sm'">
+      <td class="table-active">Адрес места нахождения производства<small class="text-warning ml-2">(для производителя
+          СМ)</small></td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+  </table>
+</div>
+<p class="text-info text-sm mb-1">Сведения о сварочном оборудовании, заявленная область аттестации, дополнительные
+  требования<small class="text-warning ml-2">(для программы и протокола)</small></p>
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <th width="40">№ пп</th>
+      <th>Вид атт<small class="text-warning ml-2">(для протокола)</small></th>
+      <th>№ свидетельства об аттестации<small class="text-warning ml-2">(для протокола при доп. или периодич.
+          атт.)</small></th>
+      <th>Шифр СО</th>
+      <th>Наименование, марка и обозначение (модель, тип)</th>
+      <th>Производитель</th>
+      <th>Заводской номер, дата производства (изготовления)</th>
+      <th>Сертификат соответствия<small class="text-warning ml-2">(для протокола)</small></th>
+      <th>Способы сварки (наплавки)</th>
+      <th>Объекты</th>
+      <th>Дополнительные требования к СО</th>
+    </tr>
+    <tr>
+      <td class="text-bold bg-light">1</td>
+      <td>Пр</td>
+      <td>-</td>
+      <td>ДИ</td>
+      <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, incidunt!</td>
+      <td>Lorem, ipsum dolor.</td>
+      <td>
+        <div>123456, 10.02.2021</div>
+        <div>123456, 10.02.2021</div>
+        <div>123456, 10.02.2021</div>
+      </td>
+      <td>1234CJ12</td>
+      <td>РАД, МАДП (наплавка)</td>
+      <td>ГО, ОХНВП</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td class="text-bold bg-light">2</td>
+      <td>Доп</td>
+      <td>АЦСО-22-00001</td>
+      <td>ДИ+ДП/КС</td>
+      <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, incidunt!</td>
+      <td>Lorem, ipsum dolor.</td>
+      <td>
+        <div>123456, 10.02.2021</div>
+        <div>123456, 10.02.2021</div>
+      </td>
+      <td>1234CJ12</td>
+      <td>РАД, МАДП (наплавка)</td>
+      <td>ГО, ОХНВП</td>
+      <td>-</td>
+    </tr>
+  </table>
+</div>
+
