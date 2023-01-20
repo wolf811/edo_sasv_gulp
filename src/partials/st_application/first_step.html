@@ -1,0 +1,160 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Сведения об организации<small
+      class="text-warning ml-2">(для СТ)</small></h6>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование
+      организации<span class="text-danger">*</span></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm" required="">
+    </div>
+    <div class="col-sm-1">
+      <a href="#" class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modal-directory-org"
+        title="выбрать из справочника"><i class="fa fa-book"></i></a>
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Адрес места
+      нахождения<span class="text-danger">*</span></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm" required="">
+    </div>
+  </div>
+  <div v-if="direction == 'st'" class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Почтовый адрес<span
+        class="text-danger">*</span><small class="text-warning ml-2">(для СТ)</small></label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control form-control-sm">
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">ИНН<small
+        class="text-muted ml-2">(или иной идентификационных признак)</small><span class="text-danger">*</span></label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control form-control-sm" required="">
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Телефон
+      организации<span class="text-danger">*</span> / факс<small class="text-muted ml-2">(при
+        наличии)</small></label>
+    <div class="col-sm-3 mb-3 mb-sm-0">
+      <input type="text" class="form-control form-control-sm" placeholder="телефон" required="">
+    </div>
+    <div class="col-sm-3">
+      <input type="text" class="form-control form-control-sm" placeholder="факс">
+    </div>
+  </div>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">E-mail
+      / адрес сайта в сети Интернет<span class="text-danger">*</span></label>
+    <div class="col-sm-3 mb-3 mb-sm-0">
+      <input type="text" class="form-control form-control-sm" placeholder="email" required="">
+    </div>
+    <div class="col-sm-3">
+      <input type="text" class="form-control form-control-sm" placeholder="адрес сайта" required="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Представитель
+      заявителя<small class="text-warning ml-2">(для СТ)</small></label>
+    <div class="col-sm-6">
+      <textarea class="form-control form-control-sm" rows="3" placeholder="ФИО, телефон, email"></textarea>
+    </div>
+  </div>
+  <div class="filial-block">
+    <hr>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наличие филиалов
+        (обособленных подразделений), выполняющих сварочные работы по заявляемой технологии<span
+          class="text-danger">*</span><small class="text-warning ml-2">(для СТ)</small></label>
+      <div class="col-sm-6">
+        <div class="form-check form-check-sm form-check-inline">
+          <input class="form-check-input" type="radio" name="filial" id="filial-yes" value="option1" checked="">
+          <label class="form-check-label" for="filial-yes">ДА</label>
+        </div>
+        <div class="form-check form-check-sm form-check-inline">
+          <input class="form-check-input" type="radio" name="filial" id="filial-no" value="option2">
+          <label class="form-check-label" for="filial-no">НЕТ</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Проверку готовности
+        к выполнению сварочных работ будет проходить<span class="text-danger">*</span><small
+          class="text-warning ml-2">(для СТ)</small></label>
+      <div class="col-sm-6">
+        <div class="form-check form-check-sm">
+          <input class="form-check-input" type="radio" name="org-or-filial" id="only-org" value="option1">
+          <label class="form-check-label" for="only-org">Организация-заявитель без участия
+            филиалов</label>
+        </div>
+        <div class="form-check form-check-sm">
+          <input class="form-check-input" type="radio" name="org-or-filial" id="org-and-filial" value="option2"
+            checked="">
+          <label class="form-check-label" for="org-and-filial">Организация-заявитель с участием одного,
+            нескольких или всех филиалов</label>
+        </div>
+        <div class="form-check form-check-sm">
+          <input class="form-check-input" type="radio" name="org-or-filial" id="only-filial" value="option3">
+          <label class="form-check-label" for="only-filial">Один из филиалов, несколько или все
+            филиалы</label>
+        </div>
+      </div>
+    </div>
+    <div id="filial_id" class="alert alert-light alert-dismissible fade show text-dark px-0">
+      <button type="button" class="close" title="удалить" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="form-group row align-items-center">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование
+          филиала (обособленного подразделения)<span class="text-danger">*</span><small class="text-warning ml-2">(для
+            СТ)</small></label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control form-control-sm" required="">
+        </div>
+      </div>
+      <div class="form-group row align-items-center mb-0">
+        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Адрес места
+          нахождения филиала (обособленного подразделения)<span class="text-danger">*</span><small
+            class="text-warning ml-2">(для СТ)</small></label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control form-control-sm" required="">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 offset-sm-5">
+        <button type="button" class="btn btn-xs btn-outline-primary"><i class="fa fa-plus mr-1"></i>Добавить
+          филиал</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="form-group row align-items-center">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Вид
+      проверки готовности организации к выполнению сварочных работ<span class="text-danger">*</span><small
+        class="text-warning ml-2">(для СТ)</small></label>
+    <div class="col-sm-6 col-xl-3">
+      <select class="form-control form-control-sm">
+        <option value="opt1">Первичная</option>
+        <option value="opt2">Периодическая</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ свидетельства о
+      готовности организации к выполнению сварочных работ<small class="text-warning ml-2">(для СТ, при
+        периодической проверке)</small></label>
+    <div class="col-sm-6 col-xl-3">
+      <input type="text" class="form-control form-control-sm">
+      <small class="form-text text-success">Свидетельство действительно до 21.08.2023</small>
+    </div>
+    <div class="col-sm-1"><a href="#" title="найти в реестре" class="btn btn-outline-primary btn-xs"><i
+          class="fa fa-search"></i></a></div>
+  </div>
+  <hr>
+
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+  </div>
+</form>

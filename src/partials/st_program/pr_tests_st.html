@@ -1,0 +1,27 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Аттестационные испытания технологии сварки (наплавки, пайки)</h6>
+  <p class="text-info text-bold text-sm mb-1">Группы однотипных производственных сварных соединений</p>
+  @include('table_parameters_group_kss_st.html')
+  <button class="btn btn-outline-primary btn-xs mb-3"><i class="fa fa-clone mr-1"></i>Скопировать данные из
+    заявки</button>
+  <p class="text-info text-bold text-sm mb-1">Контрольные сварные соединения</p>
+  @include('table_parameters_group_kss_st.html')
+  <button class="btn btn-outline-primary btn-xs mb-3"><i class="fa fa-clone mr-1"></i>Скопировать данные из групп
+    однотипности</button>
+  <p class="text-info text-bold text-sm mb-1">Методы НК, виды испытаний и исследований КСС</p>
+  @include('cert_tests_controls_info_st.html')
+  <hr>
+  <p class="text-info text-sm mb-1">Методы неразрушающего контроля КСС</p>
+  @include('cert_tests_nk_control_st.html')
+  <p class="text-info text-sm mb-1">Виды разрушающих испытаний или исследований КСС</p>
+  @include('cert_tests_destructive_st.html')
+  <hr>
+  <div class="d-flex justify-content-between">
+    <div>
+      <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+      <a href="#" type="button" class="btn btn-primary btn-sm disabled"><i
+          class="fa fa-circle-o-notch fa-spin fa-lg mr-2"></i>Сохраняем...</a>
+    </div>
+    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-1"></i>Скачать программу</a>
+  </div>
+</form>

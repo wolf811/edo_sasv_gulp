@@ -1,0 +1,217 @@
+<div class="modal fade" id="modal-choice-parameters-st" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Выбрать параметры сварных соединений (наплавок, паяных соединений)</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="" method="get">
+        <div class="modal-body">
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning text-sm mb-1">Перечень параметров зависит от способов сварки (металлы, полимеры,
+              отдельно пайка), а также "видов работ" - сварка, наплавка, ремонт. При выборе способов сварки на полимеры
+              (НИ, ЗН, НГ, Э) или пайки (ПАК) select скрывать.</p>
+            <p class="text-warning text-sm">Перечень параметров - это название столбцов в соот-щих таблицах.
+              Предусмотреть сокращенные названия для столбцов в целях экономии места на странице</p>
+            <div class="form-group mb-0">
+              <label for="">Способ (комбинация способов) сварки (наплавки, пайки):</label>
+              <div class="d-flex align-items-center">
+                <div class="text-bold text-nowrap">РД + РАД</div>
+                <select class="form-control form-control-sm ml-3 w-25">
+                  <option value="opt1">сварка</option>
+                  <option value="opt2">наплавка</option>
+                  <option value="opt3">ремонт</option>
+                </select>
+                <i data-content="данный выбор актуален только для сварных соединений металлических материалов"
+                  data-placement="top" data-toggle="popover" data-trigger="hover"
+                  class="fa fa-info-circle text-secondary ml-1"></i>
+              </div>
+            </div>
+          </div>
+          <div class="scrollspy-modal">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <tr class="table-active">
+                  <th>Параметры сварных соединений <small>(в т.ч. параметры групп однотипности, параметры КСС)</small>
+                  </th>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td class="bg-light text-bold">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Выбрать все</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Группы/подгруппы основного материала (марки основных
+                          материалов)</label>
+                      </div>
+                      <p class="text-warning mb-0">"Марки основных материалов" изменить столбец табл. Параметры КСС</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Сварочные материалы</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Толщина свариваемых деталей</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Радиус кривизны свариваемых деталей</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Номинальный наружный диаметр</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Диаметр стержней</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Тип сварного шва<i
+                            class="fa fa-info-circle text-secondary ml-1" data-toggle="popover" data-placement="top"
+                            data-trigger="hover"
+                            data-content="не применяется для сварных соединений стержней"></i></label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Тип сварного соединения</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Способ формирования сварного
+                          шва<i class="fa fa-info-circle text-secondary ml-1" data-toggle="popover" data-placement="top"
+                            data-trigger="hover"
+                            data-content="не применяется для сварных соединений стержней"></i></label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Форма подготовленных кромок
+                          свариваемых деталей</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Положение при сварке</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Требования к подогреву при
+                          сварке</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Требования к термической
+                          обработке после сварки</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Процесс сварки</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Площадь поперечного сечения
+                          свариваемых деталей<small class="text-muted ml-2">(диапазон)</small></label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label" for="">Число плавящихся электродов</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="option1">
+                        <label class="form-check-label w-100" for="">
+                          <input type="text" class="form-control form-control-sm" placeholder='название параметра'>
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bg-light">
+                      <button type="button" class="btn btn-outline-primary btn-xs"><i
+                          class="fa fa-plus mr-1"></i>Добавить свой параметр</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-outline-secondary btn-sm" data-dismiss="modal" role="button">Закрыть</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,128 @@
+<div class="table-responsive">
+  <table class="table table-bordered bg-white table-xs table-parameters-active">
+    <thead>
+      <tr class="table-active">
+        <th colspan="2">№ пп, действия</th>
+        <th>Группы/подгруппы основного материала</th>
+        <th>Сварочные материалы</th>
+        <th>Диапазон толщин</th>
+        <th>Радиус кривизны<br><span class="text-muted">(диапазон)</span></th>
+        <th>Тип шва<i class="fa fa-info-circle text-secondary ml-1" data-toggle="popover" data-placement="top"
+            data-trigger="hover" data-content="не применяется для сварных соединений стержней"></i></th>
+        <th>Тип соединения</th>
+        <th>Способ формирования шва<i class="fa fa-info-circle text-secondary ml-1" data-toggle="popover"
+            data-placement="top" data-trigger="hover" data-content="не применяется для сварных соединений стержней"></i>
+        </th>
+        <th>Форма подготовленных кромок</th>
+        <th>Положение при сварке</th>
+        <th>Требования к подогреву</th>
+        <th>Требования к термической обработке</th>
+        <th>Процесс сварки</th>
+        <th>Площадь поперечного сечения<br><span class="text-muted">(диапазон)</span></th>
+        <th>Число плавящихся электродов</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-center">1</td>
+        <td class="text-center">
+          <div class="btn-group-vertical btn-group-xs">
+            <button type="button" class="btn btn-outline-primary"><i class="fa fa-plus" title="добавить"></i></button>
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalConfirmation"
+              data-confirm="Вы уверены?"><i class="fa fa-times" title="удалить"></i></button>
+            <button type="button" class="btn btn-outline-primary"><i class="fa fa-clone"
+                title="копировать"></i></button>
+          </div>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-choice-group-materials" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>(1.1, 1.2, 1.3)</p>
+          <i class="fa fa-plus"></i>
+          <p>51 (51.1, 51.2)</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary btn-block" data-toggle="modal"
+            data-target="#modal-choice-type-sm" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>Эп(А,Б,Ц); Пп</p>
+          <i class="fa fa-plus"></i>
+          <p>Гз; Ф</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-ranges" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>12 < d < 50</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-ranges" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>12 < d < 50</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-parameter-input" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>СШ</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-parameter-input" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>С,У</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-parameter-input" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>ос(сп), ос(бп)</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-parameter-input" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>&le;15°</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-parameter-input" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>H-L045</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-parameter-input" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>О</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-parameter-input" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>Т</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-selection-from-directory" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>???</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-ranges" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>12 < d < 50</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-light btn-xs text-primary" data-toggle="modal"
+            data-target="#modal-selection-from-directory" title="изменить"><i class="fa fa-pencil-square-o"
+              aria-hidden="true"></i></button>
+          <p>???</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

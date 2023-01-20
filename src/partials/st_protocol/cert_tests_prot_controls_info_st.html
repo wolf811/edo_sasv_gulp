@@ -1,0 +1,107 @@
+<div class="table-responsive">
+  <table class="table table-bordered text-center bg-white">
+    <tr class="table-active">
+      <th>Методы НК, виды разрушающих испытаний или исследований</th>
+      <th>Объем контроля</th>
+      <th>НД, регламентирующие методику неразрушающего контроля, разрушающих испытаний или исследований</th>
+      <th>НД, регламентирующие нормы оценки качества КСС</th>
+      <th>Организация выполняющая контроль (Свид-во об аттестации лаборатории)</th>
+    </tr>
+    <tr class="bg-light">
+      <td>данные из программы</td>
+      <td>данные из программы</td>
+      <td>данные из программы</td>
+      <td>данные из программы</td>
+      <td>
+        <p class="mb-1">данные из программы</p>
+        <input type="text" class="form-control form-control-sm" placeholder="№">
+      </td>
+    </tr>
+    <tr class="bg-light">
+      <td>данные из программы</td>
+      <td>данные из программы</td>
+      <td>данные из программы</td>
+      <td>данные из программы</td>
+      <td>
+        <p class="mb-1">данные из программы</p>
+        <input type="text" class="form-control form-control-sm" placeholder="№">
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="mb-3 collapse" id="controls_info_kss_st">
+  <div class="bg-white py-3 border">
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать</label>
+      <div class="col-sm-6">
+        <div class="form-check form-check-sm form-check-inline">
+          <input type="radio" name="method_type" value="option1" class="form-check-input">
+          <label for="" class="form-check-label text-bold">Метод НК</label>
+        </div>
+        <div class="form-check form-check-sm form-check-inline">
+          <input type="radio" name="method_type" value="option1" class="form-check-input">
+          <label for="" class="form-check-label text-bold">Вид испытания/исследования</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать метод НК, вид
+        разрушающего испытания или исследования</label>
+      <div class="col-sm-6">
+        <select class="form-control form-control-sm">
+          <option value="opt0">-</option>
+          <option value="opt1">АЭ - Акустико-эмиссионный</option>
+          <option value="opt1">ВД - Вибродиагностический</option>
+          <option value="opt1">ВИК - Визуальный и измерительный</option>
+          <option value="opt1">Испытание</option>
+          <option value="opt1">Испытание</option>
+          <option value="opt2">Исследование</option>
+          <option value="opt2">Исследование</option>
+          <option value="opt2">Другое</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Название метода НК,
+        вида разрушающего испытания или исследования<small class="text-warning ml-2">(при выборе Другое из
+          select)</small></label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Объем контроля<small
+          class="text-muted ml-1">(% или кол-во образцов)</small></label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">НД, регламентирующий
+        методику НК, разрушающего испытания или исследования</label>
+      <div class="col-sm-6">
+        <textarea rows="2" class="form-control form-control-sm"></textarea>
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">НД, регламентирующий
+        нормы оценки качества<small class="text-muted ml-1">(пункт или раздел НД)</small></label>
+      <div class="col-sm-3">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+    </div>
+    <div class="form-group row align-items-center">
+      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Организация,
+        выполняющей контроль КСС</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control form-control-sm">
+      </div>
+    </div>
+    <hr>
+    <div class="ml-3">
+      <button type="button" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+      <a href="#" class="btn btn-link btn-sm" data-toggle="collapse" data-target="#controls_info_kss_st"
+        aria-expanded="false" aria-controls="controls_info_kss_st">Отмена</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,185 @@
+<div class="modal fade" id="modal-parameter-input" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Название параметра</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="" method="get">
+        <div class="modal-body">
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning">Тип сварного шва (не применяется для сварных соединений стержней)</p>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="type_seam" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">стыковой (<strong>СШ</strong>)</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" name="type_seam" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">угловой (<strong>УШ</strong>)</label>
+            </div>
+          </div>
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning">Тип сварного соединения (зависит от типа сварного шва)</p>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">Стыковое (<strong>С</strong>)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">Угловое (<strong>У</strong>)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">Тавровое (<strong>Т</strong>)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">Нахлесточное (<strong>Н</strong>)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">Торцевое (<strong>Тр</strong>)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">Крестообразное (<strong>К</strong>)</label>
+            </div>
+          </div>
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning">Cпособ формирования сварного шва (не применяется для сварных соединений стержней)
+            </p>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>ос (сп)</strong> – сварное соединение, выполняемое
+                односторонней сваркой на подкладке, или с использованием плавящейся вставки, или по ранее произведенному
+                слою шва</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>ос (бп)</strong> – сварное соединение, выполняемое
+                односторонней сваркой без подкладки</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>дс (бз)</strong> – сварное соединение, выполняемое
+                двусторонней сваркой без зачистки корневого слоя шва</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>дс (зк)</strong> – сварное соединение, выполняемое
+                двусторонней сваркой с зачисткой корневого слоя шва</label>
+            </div>
+          </div>
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning">Форма подготовленных кромок свариваемых деталей</p>
+            <div class="form-check mb-1">
+              <input type="radio" name="type_edge" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>б/р</strong> - без разделки кромок</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="radio" name="type_edge" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>&le;15°</strong> - со скосом одной или двух кромок при угле
+                разделки кромок не более 15° при односторонней или двусторонней разделке</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="radio" name="type_edge" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>>15°</strong> - со скосом одной или двух кромок при угле
+                разделки кромок более 15° при односторонней или двусторонней разделке</label>
+            </div>
+          </div>
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning">Положение при сварке</p>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PA</strong> - Нижнее (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PB</strong> - Горизонтальное тавровых соединений
+                (УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PC</strong> - Горизонтальное (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PD</strong> - Потолочное тавровых соединений (УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PE</strong> - Потолочное (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PF</strong> - Вертикальное снизу вверх (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PG</strong> - Вертикальное сверху вниз (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PF</strong> - Вертикальное снизу вверх (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PH</strong> - Вертикальное снизу вверх (труба неповоротная)
+                (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PJ</strong> - Вертикальное сверху вниз (труба неповоротная)
+                (СШ, УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>PK</strong> - Положение трубы при орбитальной сварке (СШ,
+                УШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>H-L045</strong> - Наклонное снизу вверх (труба
+                неповоротная) (СШ)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="checkbox" value="option1" class="form-check-input">
+              <label for="" class="form-check-label"><strong>J-L045</strong> - Наклонное сверху вниз (труба
+                неповоротная) (СШ)</label>
+            </div>
+          </div>
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning">Требования к подогреву при сварке (предварительному, сопутствующему)</p>
+            <div class="form-check mb-1">
+              <input type="radio" name="type_heating" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">подогрев не требуется (<strong>О</strong>)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="radio" name="type_heating" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">сварку выполняют с подогревом (<strong>П</strong>)</label>
+            </div>
+          </div>
+          <div class="alert alert-light text-dark text-sm shadow-sm">
+            <p class="text-warning">Требования к термической обработке после сварки</p>
+            <div class="form-check mb-1">
+              <input type="radio" name="type_thermal" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">термическая обработка после сварки не требуется
+                (<strong>О</strong>)</label>
+            </div>
+            <div class="form-check mb-1">
+              <input type="radio" name="type_thermal" value="option1" class="form-check-input">
+              <label for="" class="form-check-label">термическая обработка после сварки требуется
+                (<strong>Т</strong>)</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-sm">Сохранить</button>
+          <a href="#" class="btn btn-outline-secondary btn-sm" data-dismiss="modal" role="button">Закрыть</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

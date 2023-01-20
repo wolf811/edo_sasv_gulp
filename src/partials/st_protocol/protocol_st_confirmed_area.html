@@ -1,0 +1,135 @@
+<form class="editing-form shadow-sm pt-3">
+  <h6 class="text-primary text-center mb-3">Установленная область аттестации технологии сварки (пайки, наплавки)</h6>
+  <p class="text-sm text-warning">При изменении области аттестации, в модальных окнах, оставлять активными только
+    отмеченные элементы (заявленные)</p>
+  <ul class="nav nav-tabs" id="stAreaTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="org-area-tab" data-toggle="tab" href="#org-area" role="tab"
+        aria-controls="org-area" aria-selected="true">Организация</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="filial1-tab" data-toggle="tab" href="#filial1" role="tab" aria-controls="filial1"
+        aria-selected="false">Филиал 1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="filial2-tab" data-toggle="tab" href="#filial2" role="tab" aria-controls="filial2"
+        aria-selected="false">Филиал 2</a>
+    </li>
+  </ul>
+  <div class="tab-content p-3 bg-white border border-top-0" id="stAreaTabContent">
+    <div class="tab-pane fade show active" id="org-area" role="tabpanel" aria-labelledby="org-area-tab">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-sm">
+          <tbody>
+            <tr>
+              <td class="table-active w-50">Наименование организации / филиала</td>
+              <td>Lorem, ipsum dolor.</td>
+            </tr>
+            <tr>
+              <td class="table-active">Адрес места нахождения организации / филиала</td>
+              <td>Lorem, ipsum dolor.</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-bordered table-hover table-sm">
+          <tbody>
+            <tr>
+              <td class="table-active w-50">Наименование ПТД</td>
+              <td>Lorem, ipsum dolor.</td>
+            </tr>
+            <tr>
+              <td class="table-active">Обозначение ПТД, дата утверждения</td>
+              <td>Lorem, ipsum dolor.</td>
+            </tr>
+            <tr>
+              <td class="table-active w-50">Шифры НД, регламентирующих выполнение сварочных работ</td>
+              <td>Lorem, ipsum dolor.</td>
+            </tr>
+            <tr>
+              <td class="table-active">Шифры НД, регламентирующих нормы оценки качества сварных соединений
+              </td>
+              <td>Lorem, ipsum dolor.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Способ (комбинация
+          способов) сварки (наплавки, пайки)<span class="text-danger">*</span><small class="text-warning ml-2">(при
+            выборе способов сварки на полимеры (НИ, ЗН, НГ, Э) или пайки (ПАК) последний select
+            убирать)</small></label>
+        <div class="col-sm-6">
+          <div class="d-flex align-items-center">
+            <select class="form-control form-control-sm">
+              <option value="opt0"></option>
+              <option value="opt1">РД</option>
+              <option value="opt2">МПС</option>
+              <option value="opt3">АПС</option>
+              <option value="opt4">НИ</option>
+              <option value="opt5">ПАК</option>
+            </select>
+            <i class="fa fa-plus text-sm mx-3"></i>
+            <select class="form-control form-control-sm">
+              <option value="opt0"></option>
+              <option value="opt1">РД</option>
+              <option value="opt2">МПС</option>
+              <option value="opt3">АПС</option>
+              <option value="opt4">НИ</option>
+              <option value="opt5">ПАК</option>
+            </select>
+            <i class="fa fa-plus text-sm mx-3"></i>
+            <select class="form-control form-control-sm">
+              <option value="opt0"></option>
+              <option value="opt1">РД</option>
+              <option value="opt2">МПС</option>
+              <option value="opt3">АПС</option>
+              <option value="opt4">НИ</option>
+              <option value="opt5">ПАК</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-lg-4 offset-xl-1 col-form-label col-form-label-sm">Объекты<span
+            class="text-danger">*</span></label>
+        <div class="col-lg-8 col-xl-6">
+          <div class="table-responsive">
+            <table class="table table-bordered bg-white">
+              <tr>
+                <td colspan=2>
+                  <button type="button" class="btn btn-xs btn-outline-primary" data-toggle="modal"
+                    data-target="#modal-choice-objects" title="выбрать способы сварки (наплавки)">выбрать</button>
+                </td>
+              </tr>
+              <tr>
+                <td>ГО (1.1, 1.2, 1.3); ОХНВП (2.1, 2.2, 2.3); СК (3.2)</td>
+                <td width=100 class="text-center">
+                  <div class="btn-group btn-group-xs" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal"
+                      data-target="#modal-choice-objects" title="изменить"><i class="fa fa-pencil"></i></button>
+                    <button type="button" class="btn btn-outline-secondary" title="удалить"><i
+                        class="fa fa-times"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      @inclede('table_parameters_st.html')
+      <hr>
+      <button type="submit" class="btn btn-outline-primary btn-sm">Подтвердить</button>
+    </div>
+    <div class="tab-pane fade" id="filial1" role="tabpanel" aria-labelledby="filial1-tab">
+      <p class="text-sm text-warning">по аналогии с первой вкладкой</p>
+    </div>
+    <div class="tab-pane fade" id="filial2" role="tabpanel" aria-labelledby="filial2-tab">
+      <p class="text-sm text-warning">по аналогии с первой вкладкой</p>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary btn-sm btn-submit">Сохранить</button>
+    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-download mr-2"></i>Скачать протокол(ы)</a>
+  </div>
+</form>

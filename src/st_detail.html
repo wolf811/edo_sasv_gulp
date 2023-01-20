@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper d-print-none">
+    @include('partials/header.html')
+    @include('partials/name-page.html', {
+    'title': 'Проверка готовности организаций к применению аттестованных технологий сварки'
+    })
+    @include('partials/top-menu.html')
+    @include('partials/breadcrumb.html')
+    <div class="content">
+      <div class="accordion accordion-main" id="accordionCaseSt">
+        <div class="card">
+          <a href="#" class="card-header active" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-10">
+                  <i class="fa fa-angle-down mr-2"></i>Заявочные документы<em class="text-warning ml-2">(СО,СМ,СТ)</em>
+                </div>
+                <div class="col-md-2 text-md-right">
+                  <small class="text-light">id: СТ-00001</small>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionCaseSt">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-3 col-xl-2">
+                  <div class="nav nav-vertical-case flex-column sticky-top bg-light shadow-sm text-sm mb-3"
+                    id="caseEditAppl" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="appl-one-tab" data-toggle="pill" href="#appl-one" role="tab"
+                      aria-controls="appl-one" aria-selected="true">Сведения о заявителе
+                      <small class="text-warning ml-2">(для ЛК АЦ)</small></a>
+                    <a class="nav-link" id="appl-four-tab" data-toggle="pill" href="#appl-four" role="tab"
+                      aria-controls="appl-four" aria-selected="false">Сведения о ПТД
+                      <small class="text-warning ml-2">(для СТ)</small></a>
+                    <a class="nav-link" id="appl-six-tab" data-toggle="pill" href="#appl-six" role="tab"
+                      aria-controls="appl-six" aria-selected="false">Область
+                      аттестации<small class="text-warning ml-2">(СТ)</small></a>
+                  </div>
+                </div>
+                <div class="col-lg-9 col-xl-8">
+                  @include('partials/alert-check-error.html')
+                  <div class="tab-content" id="caseEditApplContent">
+                    <div class="tab-pane fade show active" id="appl-one" role="tabpanel" aria-labelledby="appl-one-tab">
+                      @include('partials/st_application/first_step.html')</div>
+                    <div class="tab-pane fade" id="appl-four" role="tabpanel" aria-labelledby="appl-four-tab">
+                      @include('partials/st_application/second_step_st.html')</div>
+                    <div class="tab-pane fade" id="appl-six" role="tabpanel" aria-labelledby="appl-six-tab">
+                      @include('partials/st_application/third_step_st.html')</div>
+                  </div>
+                </div>
+                <div class="d-none d-xl-block col-xl-2">
+                  <div class="sticky-top text-sm">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto eligendi hic itaque
+                    aut dolores, sed adipisci unde libero pariatur. Quasi iusto nemo odit nam accusantium
+                    corporis animi dicta rem recusandae.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#" class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-10">
+                  <i class="fa fa-angle-down mr-2"></i>Программа аттестации<em class="text-warning ml-2">(СО,СМ,СТ)</em>
+                </div>
+                <div class="col-md-2 text-md-right">
+                  <small class="text-light">id: СТ-00001</small>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionCaseSt">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-3 col-xl-2">
+                  <div class="nav nav-vertical-case flex-column sticky-top bg-light shadow-sm text-sm mb-3"
+                    id="caseEditProgram" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="pr-zero-tab" data-toggle="pill" href="#pr-zero" role="tab"
+                      aria-controls="pr-zero" aria-selected="true">Сведения из заявки,
+                      аттестационная комиссия<small class="text-warning ml-2">(СМ, СО, СТ)</small></a>
+                    <a class="nav-link" id="pr-one-st-tab" data-toggle="pill" href="#pr-one-st" role="tab"
+                      aria-controls="pr-one-st" aria-selected="true">Места и сроки проведения проверки готовности
+                      организации</a>
+                    <a class="nav-link" id="pr-tests-st-tab" data-toggle="pill" href="#pr-tests-st" role="tab"
+                      aria-controls="pr-tests-st" aria-selected="false">Аттестационные
+                      испытания</a>
+                  </div>
+                </div>
+                <div class="col-lg-9 col-xl-8">
+                  @include('partials/alert-check-error.html')
+                  <div class="tab-content" id="caseEditProgramContent">
+                    <div class="tab-pane fade show active" id="pr-zero" role="tabpanel" aria-labelledby="pr-zero-tab">
+                      @include('partials/st_program/pr_zero_step.html')</div>
+                    <div class="tab-pane fade show" id="pr-one-st" role="tabpanel" aria-labelledby="pr-one-st-tab">
+                      @include('partials/st_program/pr_st_checkpoint.html')</div>
+                    <div class="tab-pane fade" id="pr-tests-st" role="tabpanel" aria-labelledby="pr-tests-st-tab">
+                      @include('partials/st_program/pr_tests_st.html')</div>
+                  </div>
+                </div>
+                <div class="d-none d-xl-block col-xl-2">
+                  <div class="sticky-top text-sm pt-2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto eligendi hic itaque
+                    aut dolores, sed adipisci unde libero pariatur. Quasi iusto nemo odit nam accusantium
+                    corporis animi dicta rem recusandae.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#" class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapseTrhee"
+            aria-expanded="true" aria-controls="collapseTrhee">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-10">
+                  <i class="fa fa-angle-down mr-2"></i>Протокол аттестации<em class="text-warning ml-2">(СО,СМ,СТ)</em>
+                </div>
+                <div class="col-md-2 text-md-right">
+                  <small class="text-light">id: СТ-00001</small>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div id="collapseTrhee" class="collapse" aria-labelledby="headingThree" data-parent="#accordionCaseSt">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-3 col-xl-2">
+                  <div class="nav nav-vertical-case flex-column sticky-top bg-light shadow-sm text-sm mb-3"
+                    id="caseEditProgram" role="tablist" aria-orientation="vertical">
+                    <a @click.prevent="setActive('#protocol-zero-tab')" class="nav-link active" id="protocol-zero-tab"
+                      data-toggle="pill" href="#protocol-zero" role="tab" aria-controls="protocol-zero"
+                      aria-selected="true">Сведения из заявки,
+                      аттестационная комиссия<small class="text-warning ml-2">(СМ, СО, СТ)</small></a>
+                    <a class="nav-link" id="protocol-two-st-tab" data-toggle="pill" href="#protocol-two-st" role="tab"
+                      aria-controls="protocol-two-st" aria-selected="false">Результаты
+                      аттестационных испытаний СТ</a>
+                    <a class="nav-link" id="protocol-st-confirmed-area-tab" data-toggle="pill"
+                      href="#protocol-st-confirmed-area" role="tab" aria-controls="protocol-st-confirmed-area"
+                      aria-selected="false">Установленная
+                      область аттестации СТ</a>
+                  </div>
+                </div>
+                <div class="col-lg-9 col-xl-8">
+                  @include('partials/alert-check-error.html')
+                  <div class="tab-content" id="caseEditProtocolContent">
+                    <div class="tab-pane fade show active" id="protocol-zero" role="tabpanel"
+                      aria-labelledby="protocol-zero-tab">
+                      @include('partials/st_protocol/info_from_application.html')</div>
+                    <div class="tab-pane fade" id="protocol-two-st" role="tabpanel"
+                      aria-labelledby="protocol-two-st-tab">
+                      @include('partials/st_protocol/protocol_st_test_results.html')</div>
+                    <div class="tab-pane fade" id="protocol-st-confirmed-area" role="tabpanel"
+                      aria-labelledby="protocol-st-confirmed-area-tab">
+                      @include('partials/st_protocol/protocol_st_confirmed_area.html')</div>
+                  </div>
+                </div>
+                <div class="d-none d-xl-block col-xl-2">
+                  <div class="sticky-top text-sm pt-2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto eligendi hic itaque
+                    aut dolores, sed adipisci unde libero pariatur. Quasi iusto nemo odit nam accusantium
+                    corporis animi dicta rem recusandae.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <a href="#" class="card-header" id="headingFour" data-toggle="collapse" data-target="#collapseFour"
+            aria-expanded="true" aria-controls="collapseFour">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-10">
+                  <i class="fa fa-angle-down mr-2"></i>Заключение
+                </div>
+                <div class="col-md-2 text-md-right">
+                  <small class="text-light">id: СТ-00001</small>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionCaseSt">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-3 col-xl-2">
+                  <div class="nav nav-vertical-case flex-column sticky-top bg-light shadow-sm text-sm mb-3"
+                    id="caseEditProgram" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="conclusion-zero-tab" data-toggle="pill" href="#conclusion-zero"
+                      role="tab" aria-controls="conclusion-zero" aria-selected="true">Сведения из заявки</a>
+
+                    <a class="nav-link" id="conclusion-result-tab" data-toggle="pill" href="#conclusion-result"
+                      role="tab" aria-controls="conclusion-result" aria-selected="false">Результаты проверки</a>
+                    <a class="nav-link" id="conclusion-result-docs-tab" data-toggle="pill"
+                      href="#conclusion-result-docs" role="tab" aria-controls="conclusion-result-docs"
+                      aria-selected="false">Документы по результатам проверки</a>
+                  </div>
+                </div>
+                <div class="col-lg-9 col-xl-8">
+                  @include('partials/alert-check-error.html')
+                  <div class="tab-content" id="caseEditConclusionContent">
+                    <div class="tab-pane fade show active" id="conclusion-zero" role="tabpanel"
+                      aria-labelledby="conclusion-zero-tab">
+                      @include('partials/st_conclusion/conclusion_zero_step.html')</div>
+
+                    <div class="tab-pane fade" id="conclusion-result" role="tabpanel"
+                      aria-labelledby="conclusion-result-tab">
+                      @include('partials/st_conclusion/conclusion_result.html')</div>
+
+                    <div class="tab-pane fade" id="conclusion-result-docs" role="tabpanel"
+                      aria-labelledby="conclusion-result-docs-tab">
+                      @include('partials/st_conclusion/conclusion_result_docs.html')</div>
+                  </div>
+                </div>
+                <div class="d-none d-xl-block col-xl-2">
+                  <div class="sticky-top text-sm pt-2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto eligendi hic itaque
+                    aut dolores, sed adipisci unde libero pariatur. Quasi iusto nemo odit nam accusantium
+                    corporis animi dicta rem recusandae.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    @include('partials/footer.html')
+
+  </div>
+
+  @include('partials/modal/modal-directory-org.html')
+  @include('partials/modal/modal-established-area.html')
+  @include('partials/modal/modal-choice-welding-method.html')
+  @include('partials/modal/modal-choice-objects.html')
+  <!-- @include('partials/modal/modal-choice-control-methods.html') -->
+  @include('partials/modal/modal-comission-choice.html')
+  @include('partials/modal/modal-choice-parameters-st.html')
+  @include('partials/modal/modal-choice-group-materials.html')
+  @include('partials/modal/modal-choice-type-sm.html')
+  @include('partials/modal/modal-ranges.html')
+  @include('partials/modal/modal-parameter-input.html')
+  @include('partials/modal/modal-selection-from-directory.html')
+  @include('partials/modal/modal-make-value.html')
+</body>
+
+</html>
