@@ -43,10 +43,10 @@
   <div class="collapse show" id="characteristic_sm">
     <div class="bg-white py-3 border">
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Характеристика
+        <label for="choice_characteristic_sm" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Характеристика
           СМ</label>
         <div class="col-sm-6">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="choice_characteristic_sm">
             <option value="">-</option>
             <option value="">Геометрические параметры и состояние поверхности (Эп, Пс, Пп, Ф)</option>
             <option value="">Прочность покрытия (Эп, Пс)</option>
@@ -58,21 +58,22 @@
         </div>
       </div>
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Название характеристики<i
+        <label for="my_characteristic_sm" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Название характеристики<i
             class="fa fa-info-circle text-secondary ml-1" data-content="ГОСТ Р 59604.4-2021 п.п.10.1.3"
             data-placement="top" data-toggle="popover" data-trigger="hover"></i><small class="text-warning ml-2">(поле
             появится, если выбрать пункт 'Другая характеристика' из 'Характеристик СМ')</small></label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm">
+          <input type="text" id="my_characteristic_sm" class="form-control form-control-sm">
         </div>
       </div>
-      <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Методы НК, виды разрушающих
+      <div class="form-group row">
+        <label for="research_test_methods" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Методы НК, виды разрушающих
           испытаний и исследований<small class="text-warning ml-2">(можно формализовать из типовых
             программ)</small></label>
         <div class="col-sm-6">
-          <textarea rows="2" class="form-control form-control-sm"></textarea>
-          <!-- <div class="table-responsive">
+          <textarea rows="2" id="research_test_methods" class="form-control form-control-sm"></textarea>
+          <div class="text-warning mн-2">ИЛИ</div>
+          <div class="table-responsive">
             <table class="table table-bordered bg-white">
               <tbody>
                 <tr>
@@ -95,35 +96,35 @@
                 </tr>
               </tbody>
             </table>
-          </div> -->
+          </div>
         </div>
       </div>
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Оборудование для контроля,
+        <label for="equipment_research_test_methods" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Оборудование для контроля,
           испытаний и исследований</label>
         <div class="col-sm-6">
-          <textarea rows="2" class="form-control form-control-sm"></textarea>
+          <textarea rows="2" id="equipment_research_test_methods" class="form-control form-control-sm"></textarea>
         </div>
       </div>
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документ, регламентирующий
+        <label for="document_research_test_methods" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документ, регламентирующий
           методику НК, разрушающих испытаний и исследований</label>
         <div class="col-sm-6">
-          <textarea rows="2" class="form-control form-control-sm"></textarea>
+          <textarea rows="2" id="document_research_test_methods" class="form-control form-control-sm"></textarea>
         </div>
       </div>
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">НД, устанавливающий
+        <label for="specification_document_sm" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">НД, устанавливающий
           технические требования к СМ<small class="text-warning ml-2">(заявка!!!)</small></label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" value="данные из заявки справочно">
+          <input type="text" id="specification_document_sm" class="form-control form-control-sm" value="данные из заявки справочно">
         </div>
       </div>
 
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Объем контроля</label>
+        <label for="scope_control" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Объем контроля</label>
         <div class="col-sm-6">
-          <textarea rows="2" class="form-control form-control-sm"></textarea>
+          <textarea rows="2" id="scope_control" class="form-control form-control-sm"></textarea>
         </div>
       </div>
       <hr>

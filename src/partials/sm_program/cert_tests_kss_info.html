@@ -44,36 +44,36 @@
       <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Тип КСС</label>
       <div class="col-sm-6">
         <div class="form-check form-check-inline form-check-sm">
-          <input name="type_kss" type="radio" value="option1" class="form-check-input">
-          <label for="" class="form-check-label">тип А - наплавка</label>
+          <input id="type_kss_a" name="type_kss" type="radio" value="option1" class="form-check-input">
+          <label for="type_kss_a" class="form-check-label">тип А - наплавка</label>
         </div>
         <div class="form-check form-check-inline form-check-sm">
-          <input name="type_kss" type="radio" value="option2" class="form-check-input" checked="checked">
-          <label for="" class="form-check-label">тип Б - сварное соединение</label>
+          <input id="type_kss_b" name="type_kss" type="radio" value="option2" class="form-check-input" checked="checked">
+          <label for="type_kss_b" class="form-check-label">тип Б - сварное соединение</label>
         </div>
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<i
+      <label for="designation_kss" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<i
           class="fa fa-info-circle text-secondary ml-1"
           data-content="Обозначение КСС состоит из пяти частей: 1 - содержит обозначение типа КСС (А/Б); 2 - обозначение способа сварки (наплавки); 3 - обозначение групп/подгрупп свариваемых материалов; 4 - порядковый № партии, присвоенный в акте отбора; 5 - для Пп, Пс, Эп - типоразмер, для Гз - марку или состав газа или газовой смеси"
           data-placement="top" data-toggle="popover" data-trigger="hover"></i></label>
       <div class="col-sm-3">
-        <input type="text" class="form-control form-control-sm" value="Б-" required>
+        <input type="text" id="designation_kss" class="form-control form-control-sm" value="Б-" required>
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ технологической карты
+      <label for="card_kss_number" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ технологической карты
         сварки (наплавки) КСС</label>
       <div class="col-sm-3">
-        <input type="text" class="form-control form-control-sm" required>
+        <input type="text" id="card_kss_number" class="form-control form-control-sm" required>
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать способ сварки
+      <label for="welding_method_application" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать способ сварки
         (наплавки)<small class="text-warning ml-2">Заявка!!!</small></label>
       <div class="col-sm-3">
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" id="welding_method_application">
           <option value="opt0">-</option>
           <option value="opt1">РАД</option>
           <option value="opt2">МАДП (наплавка)</option>
@@ -81,12 +81,12 @@
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать
+      <label for="group_material_application" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Выбрать
         группы/подгруппы
         основного материала<small class="text-warning ml-2">Заявка!!!</small></label>
       <div class="col-sm-6">
         <div class="d-flex align-items-center">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="group_material_application">
             <option value="opt0">-</option>
             <option value="opt1">1.1</option>
             <option value="opt2">1.2</option>
@@ -95,7 +95,7 @@
             <option value="opt5">51.2</option>
           </select>
           <i class="fa fa-plus text-sm mx-3"></i>
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="group_material_application">
             <option value="opt0">-</option>
             <option value="opt1">1.1</option>
             <option value="opt2">1.2</option>
@@ -107,10 +107,10 @@
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Параметры и количество
+      <label for="parameters_quantity_kss" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Параметры и количество
         КСС</label>
       <div class="col-sm-6">
-        <textarea rows="2" class="form-control form-control-sm"></textarea>
+        <textarea id="parameters_quantity_kss" rows="2" class="form-control form-control-sm"></textarea>
       </div>
     </div>
 

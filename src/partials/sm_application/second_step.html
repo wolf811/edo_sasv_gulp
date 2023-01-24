@@ -1,10 +1,10 @@
 <form class="editing-form shadow-sm pt-3">
   <h6 class="text-primary text-center mb-3">Данные о сварочных материалах</h6>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Вид СМ<span
+    <label for="type_sm" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Вид СМ<span
         class="text-danger">*</span></label>
     <div class="col-sm-6 col-xl-4">
-      <select class="form-control form-control-sm">
+      <select class="form-control form-control-sm" id="type_sm">
         <option value="opt0">выбрать</option>
         <option value="opt1">Гз - Газы защитные</option>
         <option value="opt2">Пп - Проволоки и ленты порошковые</option>
@@ -15,20 +15,20 @@
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Марка СМ<span
+    <label for="brand_sm" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Марка СМ<span
         class="text-danger">*</span><i class="fa fa-info-circle text-secondary ml-1" data-container="body"
         data-toggle="popover" data-placement="top" data-trigger="hover"
         data-content="При отсутствии марки Гз указывают газ или газовые смеси, относящиеся к одной группе индексов по ГОСТ Р ИСО 14175"
         data-original-title="" title=""></i></label>
     <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" required="">
+      <input type="text" id="brand_sm" class="form-control form-control-sm" required="">
     </div>
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Классификационное
+    <label for="classification_designation" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Классификационное
       обозначение (тип)</label>
     <div class="col-sm-6">
-      <textarea class="form-control form-control-sm" rows="2"></textarea>
+      <textarea id="classification_designation" class="form-control form-control-sm" rows="2"></textarea>
     </div>
   </div>
   <p class="text-warning text-sm mb-1">Поля "Типоразмеры" и "Состав" отображаются в зависимости от выбранного Вида СМ.
@@ -100,28 +100,28 @@
     </div>
   </div> -->
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Вид и марка сочетаемого
+    <label for="type_brand_compatible_sm" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Вид и марка сочетаемого
       СМ</label>
     <div class="col-sm-6">
-      <textarea class="form-control form-control-sm" rows="2"></textarea>
+      <textarea id="type_brand_compatible_sm" class="form-control form-control-sm" rows="2"></textarea>
     </div>
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифр НД, устанавливающего
+    <label for="specification_document_code" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифр НД, устанавливающего
       технические требования к СМ<small class="text-muted ml-2">(стандарт, технические условия и
         т.д.)</small><small class="text-warning ml-2">(для производителя или предствителя производителя
         СМ)</small></label>
     <div class="col-sm-6">
-      <textarea class="form-control form-control-sm" rows="2"></textarea>
+      <textarea id="specification_document_code" class="form-control form-control-sm" rows="2"></textarea>
     </div>
   </div>
   <hr>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Производитель СМ<span
+    <label for="name_org_fabricator" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Производитель СМ<span
         class="text-danger">*</span><small class="text-warning ml-2">(только
         для потребителя СМ)</small></label>
     <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" required="">
+      <input type="text" id="name_org_fabricator" class="form-control form-control-sm" required="">
     </div>
     <div class="col-sm-1">
       <a href="#" class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modal-directory-org"
@@ -134,30 +134,30 @@
         <span aria-hidden="true">&times;</span>
       </button>
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ партии, объем
+        <label for="batch_number" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ партии, объем
           партии,
           дата выпуска<span class="text-danger">*</span><small class="text-warning ml-2">(только для
             потребителя
             СМ)</small></label>
         <div class="col-sm-2">
-          <input type="text" class="form-control form-control-sm" placeholder="№" required="">
+          <input type="text" id="batch_number" class="form-control form-control-sm" placeholder="№" required="">
         </div>
         <div class="col-sm-2">
-          <input type="text" class="form-control form-control-sm" placeholder="шт." required="">
+          <input type="text" id="batch_size" class="form-control form-control-sm" placeholder="шт." required="">
         </div>
         <div class="col-sm-2">
-          <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+          <input type="date" id="batch_date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
         </div>
       </div>
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документ о качестве
+        <label for="quality_document" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документ о качестве
           (№, дата)<span class="text-danger">*</span><small class="text-warning ml-2">(только для потребителя
             СМ)</small></label>
         <div class="col-sm-2">
-          <input type="text" class="form-control form-control-sm" placeholder="№" required="">
+          <input type="text" id="quality_document" class="form-control form-control-sm" placeholder="№" required="">
         </div>
         <div class="col-sm-2">
-          <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+          <input type="date" id="quality_document_date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
         </div>
       </div>
     </div>
@@ -169,19 +169,19 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифры НД, регламентирующих
+    <label for="quality_document_code" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифры НД, регламентирующих
       нормы оценки качества сварных соединений<small class="text-warning ml-2">(только для потребителя
         СМ)</small></label>
     <div class="col-sm-6">
-      <textarea class="form-control form-control-sm" rows="2"></textarea>
+      <textarea id="quality_document_code" class="form-control form-control-sm" rows="2"></textarea>
     </div>
   </div>
   <hr>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Вид
+    <label for="type_attestation" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Вид
       аттестации<span class="text-danger">*</span></label>
     <div class="col-sm-6 col-xl-3">
-      <select class="form-control form-control-sm">
+      <select class="form-control form-control-sm" id="type_attestation">
         <option value="opt1">Первичная</option>
         <option selected value="opt2">Периодическая</option>
         <option value="opt3">Дополнительная</option>
@@ -189,11 +189,11 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ свидетельства об
+    <label for="certificate_number" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">№ свидетельства об
       аттестации СМ<small class="text-warning ml-2">(при периодической или дополнительной
         аттестации)</small></label>
     <div class="col-sm-6 col-xl-3">
-      <input type="text" class="form-control form-control-sm">
+      <input type="text" id="certificate_number" class="form-control form-control-sm">
       <small class="form-text text-success">Свидетельство действительно до 21.08.2023</small>
     </div>
     <div class="col-sm-1">

@@ -46,10 +46,10 @@
 <div class="mb-3 collapse" id="mechanical_properties_seam">
   <div class="bg-white py-3 border">
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<small
+      <label for="choice_kss" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Обозначение КСС<small
           class="text-warning ml-2">см. 'Данные о КСС'!!!</small></label>
       <div class="col-sm-3">
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" id="choice_kss">
           <option value="opt0">-</option>
           <option value="opt1">КСС 1</option>
           <option value="opt2">КСС 2</option>
@@ -98,31 +98,31 @@
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Контролируемый
+      <label for="controlled_parameter" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Контролируемый
         параметр</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm">
+        <input type="text" id="controlled_parameter" class="form-control form-control-sm">
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Оборудование для
+      <label for="equipment_tests" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Оборудование для
         испытания</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm">
+        <input type="text" id="equipment_tests" class="form-control form-control-sm">
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Тип образца для
+      <label for="type_test_piece" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Тип образца для
         испытаний</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control form-control-sm">
+        <input type="text" id="type_test_piece" class="form-control form-control-sm">
       </div>
     </div>
     <div class="form-group row align-items-center">
-      <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документы, регламентирующий
+      <label for="quality_assessment_documents" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Документы, регламентирующий
         нормы оценки качества КСС</label>
       <div class="col-sm-6">
-        <textarea rows="2" class="form-control form-control-sm"
+        <textarea rows="2" id="quality_assessment_documents" class="form-control form-control-sm"
           value="перечислены документы, указанные ранее"></textarea>
       </div>
     </div>

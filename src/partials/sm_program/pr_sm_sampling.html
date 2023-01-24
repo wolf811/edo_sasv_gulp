@@ -1,10 +1,10 @@
 <form class="editing-form shadow-sm pt-3">
   <h6 class="text-primary text-center mb-3">Отбор образцов СМ для аттестационных испытаний</h6>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование (место
+    <label for="sampling_site" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование (место
       отбора)<span class="text-danger">*</span></label>
     <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" required="">
+      <input type="text" id="sampling_site" class="form-control form-control-sm" required="">
     </div>
     <!-- <div class="col-sm-1">
       <a href="#" class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modal-directory-org"
@@ -12,43 +12,43 @@
     </div> -->
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Адрес места отбора<span
+    <label for="sampling_site_address" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Адрес места отбора<span
         class="text-danger">*</span></label>
     <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" required="">
+      <input type="text" id="sampling_site_address" class="form-control form-control-sm" required="">
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Дата отбора</label>
+    <label for="sampling_site_date" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Дата отбора</label>
     <div class="col-sm-2">
-      <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+      <input type="date" id="sampling_site_date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Количество отбираемых
+    <label for="number_samples" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Количество отбираемых
       образцов СМ<span class="text-danger">*</span></label>
     <div class="col-sm-6 col-xl-3">
-      <input type="text" class="form-control form-control-sm" placeholder="количество">
+      <input type="text" id="number_samples" class="form-control form-control-sm" placeholder="количество">
     </div>
     <!-- <div class="col-sm-6 col-xl-3">
       <input type="text" class="form-control form-control-sm" placeholder="вес">
     </div> -->
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Представитель
+    <label for="applicant_representative" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Представитель
       заявителя</label>
     <div class="col-sm-6 col-xl-3">
-      <input type="text" class="form-control form-control-sm" placeholder="ФИО">
+      <input type="text" id="applicant_representative" class="form-control form-control-sm" placeholder="ФИО">
     </div>
     <div class="col-sm-6 col-xl-3">
-      <input type="text" class="form-control form-control-sm" placeholder="телефон, email">
+      <input type="text" id="applicant_representative_contacts" class="form-control form-control-sm" placeholder="телефон, email">
     </div>
   </div>
-  <div class="form-group row align-items-center"><label for=""
+  <div class="form-group row align-items-center"><label for="choice_commission_member"
       class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Член аттестационной
       комиссии АЦ</label>
     <div class="col-sm-6 col-xl-3">
-      <select class="form-control form-control-sm">
+      <select class="form-control form-control-sm" id="choice_commission_member">
         <option value="opt1">-</option>
         <option value="opt2">Фамилия Имя Отчество</option>
         <option value="opt3">Фамилия Имя Отчество</option>
@@ -56,7 +56,7 @@
       </select>
     </div>
     <div class="col-sm-6 col-xl-3">
-      <input type="text" class="form-control form-control-sm" placeholder="телефон, email">
+      <input type="text" id="commission_member_contacts" class="form-control form-control-sm" placeholder="телефон, email">
     </div>
   </div>
   <hr>
