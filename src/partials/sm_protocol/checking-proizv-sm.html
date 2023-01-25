@@ -2,28 +2,28 @@
   <h6 class="text-primary text-center mb-3">Проверка технических возможностей производителя СМ</h6>
   <p class="text-sm text-warning">Блок актуален только для <b>производителя и представителя производителя СМ</b></p>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">АЦ, выполнивший проверку; сроки
+    <label for="select_verification_center" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">АЦ, выполнивший проверку; сроки
       проверки<small class="text-warning ml-2">(информация может быть перенесена из блока 'Сведениях о заявителе' в
         разделе 'Заявочные докуметы'.)</small></label>
     <div class="col-sm-2">
-      <select class="form-control form-control-sm">
+      <select class="form-control form-control-sm" id="select_verification_center">
         <option value="opt1">-</option>
         <option selected value="opt2">АЦСМ-22, Москва</option>
         <option value="opt3">АЦСМ-23, Санкт-Петербург</option>
       </select>
     </div>
     <div class="col-sm-2">
-      <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+      <input type="date" id="verification_period_from" class="form-control form-control-sm" placeholder="дд.мм.гггг">
     </div>
     <div class="col-sm-2">
-      <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+      <input type="date" id="verification_period_to" class="form-control form-control-sm" placeholder="дд.мм.гггг">
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Результаты
+    <label for="verification_result" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Результаты
       проверки<small class="text-warning ml-2">(если неудовлетворительно, то аттестацию не проводят!!!)</small></label>
     <div class="col-sm-6 col-xl-4">
-      <select class="form-control form-control-sm">
+      <select class="form-control form-control-sm" id="verification_result">
         <option value="opt1">-</option>
         <option value="opt2">удовлетворительно</option>
         <option value="opt3">неудовлетворительно</option>
@@ -31,10 +31,10 @@
     </div>
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Отчет о проверке<small
+    <label for="verification_report" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Отчет о проверке<small
         class="text-muted ml-2">(если оформлялся)</small></label>
     <div class="col-sm-6 col-xl-4">
-      <input type="file" class="form-control form-control-sm">
+      <input type="file" id="verification_report" class="form-control form-control-sm">
     </div>
   </div>
   <div class="form-group row align-items-center">

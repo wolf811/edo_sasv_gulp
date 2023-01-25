@@ -13,8 +13,8 @@
           <div class="scrollspy-modal">
             <div class="bg-light shadow-sm p-3 mb-3">
               <div class="form-group">
-                <label for="" class="col-form-label-sm">Метод НК</label>
-                <select class="form-control form-control-sm">
+                <label for="choice_method_nk" class="col-form-label-sm">Метод НК</label>
+                <select class="form-control form-control-sm" id="choice_method_nk">
                   <option value="opt0">-</option>
                   <option value="opt1">АЭ - Акустико-эмиссионный</option>
                   <option value="opt1">ВД - Вибродиагностический</option>
@@ -26,20 +26,20 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="" class="col-form-label-sm">Другое испытание/исследование<small
+                <label for="my_method_nk" class="col-form-label-sm">Другой метод<small
                     class="text-warning ml-2">(выбор Другой из select)</small></label>
-                <input type="text" class="form-control form-control-sm">
+                <input type="text" id="my_method_nk" class="form-control form-control-sm">
               </div>
               <div class="form-group">
-                <label for="" class="col-form-label-sm">Документ, регламентирующий методику НК</label>
-                <textarea rows="2" class="form-control form-control-sm"></textarea>
+                <label for="methodology_nk_document" class="col-form-label-sm">Документ, регламентирующий методику НК</label>
+                <textarea rows="2" id="methodology_nk_document" class="form-control form-control-sm"></textarea>
               </div>
             </div>
             <p class="text-warning text-sm mt-2">ИЛИ</p>
             <div class="bg-light shadow-sm p-3 mb-3">
               <div class="form-group">
-                <label for="" class="col-form-label-sm">Вид разрушающих испытаний и исследований</label>
-                <select class="form-control form-control-sm">
+                <label for="choice_type_destructive_test" class="col-form-label-sm">Вид разрушающих испытаний и исследований</label>
+                <select class="form-control form-control-sm" id="choice_type_destructive_test">
                   <option value="opt0">-</option>
                   <option value="opt1">испытание</option>
                   <option value="opt1">исследование</option>
@@ -49,14 +49,14 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="" class="col-form-label-sm">Другое испытание/исследование<small
+                <label for="my_destructive_test" class="col-form-label-sm">Другое испытание/исследование<small
                     class="text-warning ml-2">(выбор Другое из select)</small></label>
-                <input type="text" class="form-control form-control-sm">
+                <input type="text" id="my_destructive_test" class="form-control form-control-sm">
               </div>
               <div class="form-group">
-                <label for="" class="col-form-label-sm">Документ, регламентирующий методику разрушающих
+                <label for="methodology_destructive_test_document" class="col-form-label-sm">Документ, регламентирующий методику разрушающих
                   испытаний и исследований</label>
-                <textarea rows="2" class="form-control form-control-sm"></textarea>
+                <textarea rows="2" id="methodology_destructive_test_document" class="form-control form-control-sm"></textarea>
               </div>
             </div>
             <button class="btn btn-outline-primary btn-xs"><i class="fa fa-plus mr-1"></i>Добавить</button>
