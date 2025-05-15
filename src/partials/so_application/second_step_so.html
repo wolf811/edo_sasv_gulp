@@ -75,10 +75,10 @@
   <div class="mb-3 collapse show" id="so_id">
     <div class="bg-white py-3 border">
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Вид
+        <label for="type_attestation" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm text-bold">Вид
           аттестации<span class="text-danger">*</span></label>
         <div class="col-sm-6 col-xl-3">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="type_attestation">
             <option value="opt1">Первичная</option>
             <option selected value="opt2">Периодическая</option>
             <option value="opt3">Дополнительная</option>
@@ -86,10 +86,10 @@
         </div>
       </div>
       <div class="form-group row align-items-center">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифр СО<span
+        <label for="cipher_so" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Шифр СО<span
             class="text-danger">*</span></label>
         <div class="col-1">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="cipher_so">
             <option value="opt0"></option>
             <option value="opt1">ДИ</option>
             <option value="opt2">ДА</option>
@@ -103,7 +103,7 @@
           </select>
         </div>
         <div class="col-1">
-          <select class="form-control form-control-sm">
+          <select class="form-control form-control-sm" id="cipher_so_znak">
             <option value="opt0"></option>
             <option value="opt1">/</option>
             <option value="opt2">+</option>
@@ -146,17 +146,17 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование, марка
+        <label for="brand_so" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование, марка
           и обозначение (модель, тип)<span class="text-danger">*</span></label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" required="">
+          <input type="text" id="brand_so" class="form-control form-control-sm" required="">
         </div>
       </div>
       <div class="form-group row">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Производитель<span
+        <label for="name_org_fabricator" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Производитель<span
             class="text-danger">*</span></label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm" required="">
+          <input type="text" id="name_org_fabricator" class="form-control form-control-sm" required="">
         </div>
         <div class="col-sm-1">
           <a href="#" class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modal-directory-org"
@@ -169,13 +169,13 @@
             class="text-warning ml-2">(поле "№ свидетельства" отображается только в случае периодической или
             дополнительной аттестации)</small></label>
         <div class="col-sm-2">
-          <input type="text" class="form-control form-control-sm" placeholder="№" required="">
+          <input type="text" id="zavod_nymber" class="form-control form-control-sm" placeholder="№" required="">
         </div>
         <div class="col-sm-2">
-          <input type="date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
+          <input type="date" id="proizv_date" class="form-control form-control-sm" placeholder="дд.мм.гггг">
         </div>
         <div class="col-sm-2">
-          <input type="text" class="form-control form-control-sm" placeholder="№ свидетельства" required="">
+          <input type="text" id="svid_number" class="form-control form-control-sm" placeholder="№ свидетельства" required="">
         </div>
         <div class="col-sm-1">
           <button class="btn btn-xs btn-outline-secondary" title="удалить"><i class="fa fa-times"></i></button>
@@ -202,10 +202,10 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Сертификат
+        <label for="certificate_conformity" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Сертификат
           соответствия<small class="text-muted ml-2">(при наличии)</small></label>
         <div class="col-sm-6">
-          <input type="text" class="form-control form-control-sm">
+          <input type="text" id="certificate_conformity" class="form-control form-control-sm">
         </div>
       </div>
       <hr>
@@ -268,51 +268,24 @@
       <hr>
       <h6 class="text-primary text-center mb-3">Дополнительные требования</h6>
       <div class="form-group row">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Укажите
+        <label for="additional_requirements" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Укажите
           дополнительные
           требования<i class="fa fa-info-circle text-secondary ml-1" data-container="body" data-toggle="popover"
             data-placement="top" data-trigger="hover"
             data-content="Например, НД, регламентирующие требования к СО для применения на конкретном(ых) объекте(ах), проверяемые технические характеристики (параметры) СО и т.д"></i></label>
         <div class="col-sm-6">
-          <textarea class="form-control form-control-sm" rows="3"></textarea>
+          <textarea id="additional_requirements" class="form-control form-control-sm" rows="3"></textarea>
         </div>
       </div>
       <hr>
       <h6 class="text-primary text-center mb-3">Техническая документация<i class="fa fa-info-circle text-secondary ml-1"
           data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover"
           data-content="Файлы формата jpg, png, pdf, zip, не более 10 Мб"></i></h6>
-      <div v-if="status == 'apl'">
-        <div class="row mb-3">
-          <div class="col-sm offset-sm-5">
-            <div class="form-check form-check-sm">
-              <input class="form-check-input" type="radio" name="how-to-send" value="option1" checked>
-              <label class="form-check-label" for="">
-                Отправка документов, используя систему ЭДО
-              </label>
-            </div>
-            <div class="form-check form-check-sm">
-              <input class="form-check-input" type="radio" name="how-to-send" value="option2">
-              <label class="form-check-label" for="">
-                Отправка документов, не используя систему ЭДО
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Примечание для
-            отправки<small class="text-warning ml-2">(для отправки документов, не используя ЭДО)</small></label>
-          <div class="col-sm-6 col-xl-4">
-            <textarea rows="3" class="form-control form-control-sm"
-              placeholder="укажите способ отправки, дату отправки и т.д."></textarea>
-          </div>
-        </div>
-      </div>
       <div class="form-group row">
-        <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Паспорт, инструкция
-          по
-          эксплуатации</label>
+        <label for="passport_doc" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Паспорт, инструкция
+          по эксплуатации</label>
         <div class="col-sm-6 col-xl-4">
-          <input type="file" class="form-control form-control-sm">
+          <input type="file" id="passport_doc" class="form-control form-control-sm">
         </div>
       </div>
       <div class="form-group row align-items-center">
@@ -329,10 +302,10 @@
       </div>
       <div class="form-group row align-items-center">
         <div class="col-sm-5 col-xl-4 offset-xl-1">
-          <input type="text" class="form-control form-control-sm" placeholder="Название документа(ов)">
+          <input type="text" id="name_doc" class="form-control form-control-sm" placeholder="Название документа(ов)">
         </div>
         <div class="col-sm-6 col-xl-4">
-          <input type="file" class="form-control form-control-sm">
+          <input type="file" id="file_doc" class="form-control form-control-sm">
         </div>
         <div class="col-sm-1">
           <a href="#" class="btn btn-outline-secondary btn-xs" title="удалить"><i class="fa fa-times"></i></a>

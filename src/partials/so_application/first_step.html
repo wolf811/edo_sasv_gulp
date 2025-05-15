@@ -2,10 +2,10 @@
   <h6 class="text-primary text-center mb-3">Сведения о заявителе
     аттестации<small class="text-warning ml-2">(для СМ, СО)</small></h6>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование
+    <label for="name_org" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Наименование
       организации<span class="text-danger">*</span></label>
     <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" required="">
+      <input type="text" id="name_org" class="form-control form-control-sm" required="">
     </div>
     <div class="col-sm-1">
       <a href="#" class="btn btn-outline-primary btn-xs" data-toggle="modal" data-target="#modal-directory-org"
@@ -13,45 +13,45 @@
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Адрес места
+    <label for="org_address" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Адрес места
       нахождения<span class="text-danger">*</span></label>
     <div class="col-sm-6">
-      <input type="text" class="form-control form-control-sm" required="">
+      <input type="text" id="org_address" class="form-control form-control-sm" required="">
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">ИНН<small
+    <label for="org_inn" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">ИНН<small
         class="text-muted ml-2">(или иной идентификационных признак)</small><span class="text-danger">*</span></label>
     <div class="col-sm-3">
-      <input type="text" class="form-control form-control-sm" required="">
+      <input type="text" id="org_inn" class="form-control form-control-sm" required="">
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Телефон
+    <label for="org_phone" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Телефон
       организации<span class="text-danger">*</span> / факс<small class="text-muted ml-2">(при
         наличии)</small></label>
     <div class="col-sm-3 mb-3 mb-sm-0">
-      <input type="text" class="form-control form-control-sm" placeholder="телефон" required="">
+      <input type="text" id="org_phone" class="form-control form-control-sm" placeholder="телефон" required="">
     </div>
     <div class="col-sm-3">
-      <input type="text" class="form-control form-control-sm" placeholder="факс">
+      <input type="text" id="org_fax" class="form-control form-control-sm" placeholder="факс">
     </div>
   </div>
   <div class="form-group row align-items-center">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">E-mail
+    <label for="org_email" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">E-mail
       / адрес сайта в сети Интернет<span class="text-danger">*</span></label>
     <div class="col-sm-3 mb-3 mb-sm-0">
-      <input type="text" class="form-control form-control-sm" placeholder="email" required="">
+      <input type="text" id="org_email" class="form-control form-control-sm" placeholder="email" required="">
     </div>
     <div class="col-sm-3">
-      <input type="text" class="form-control form-control-sm" placeholder="адрес сайта" required="">
+      <input type="text" id="org_site" class="form-control form-control-sm" placeholder="адрес сайта" required="">
     </div>
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Контактное лицо<small
+    <label for="org_contact_person" class="col-sm-5 col-xl-4 offset-xl-1 col-form-label col-form-label-sm">Контактное лицо<small
         class="text-warning ml-2">(для СМ, СО)</small></label>
     <div class="col-sm-6">
-      <textarea class="form-control form-control-sm" rows="3" placeholder="ФИО, телефон, email"></textarea>
+      <textarea id="org_contact_person" class="form-control form-control-sm" rows="3" placeholder="ФИО, телефон, email"></textarea>
     </div>
   </div>
   <hr>
